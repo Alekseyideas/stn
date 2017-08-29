@@ -1,0 +1,104 @@
+@import "vars"
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700')
+body
+  font-size: 16px
+  padding: 0
+  margin: 0
+  font-family: "Open Sans", sans-serif
+
+
+a,button,input
+  outline: 0
+  text-decoration: none
+  -webkit-appearance: none
+  box-shadow: 0
+  &:hover
+    text-decoration: none
+    outline: 0
+
+
+#block-1
+  background: url("../img/block-1.jpg") no-repeat center / cover
+
+.height-block
+  position: relative
+
+#main-logo
+  width: 50%
+  height: auto
+  position: relative
+  top: 50%
+
+.to-next-slide
+  position: absolute
+  bottom: 20px
+  left: 50%
+  width: 50px
+  height: 50px
+  border: 1px solid white
+  color: white
+  text-align: center
+  line-height: 45px
+  font-size: 35px
+  border-radius: 50%
+  cursor: pointer
+  transition: .2s
+  &:hover
+    border: 1px solid $orange
+    color: $orange
+header
+  position: fixed
+  z-index: 1
+  width: 100%
+  padding: 20px 0
+.menu-logo
+  width: 50%
+  img
+    display: block
+    margin: auto
+    width: 80%
+    height: auto
+    cursor: pointer
+.logo-tel
+  a
+    color: $blue
+nav
+  height: 100%
+  ul
+    height: 100%
+    li
+      position: relative
+      margin: 0 20px
+      a
+        color: $blue
+        text-transform: uppercase
+        transition: .2s
+        font-weight: bold
+        &:hover
+          color: $orange
+      ul
+        position: absolute
+        top: 100%
+        left: 0
+        width: 100%
+        min-width: 300px
+        display: none
+        li
+          margin: 0
+          padding: 10px 0
+  .has-sub-menu
+    &:after
+      content: '\f107 '
+      font-family: FontAwesome
+      color: $blue
+      font-size: 20px
+      margin-left: 5px
+    &:hover
+      ul
+        display: block
+      &>a
+        color: $orange
+      &:after
+        color: $orange
+
+@import "media"
