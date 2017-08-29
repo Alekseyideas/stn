@@ -14,10 +14,13 @@
 
 
 
-<div class="height-block text-center" id="block-2">
+<div class="height-block text-center" id="block-2"></div>
+<div class="height-block text-center" id="block-3"></div>
+<div class="height-block text-center" id="block-4"></div>
+<div class="height-block text-center" id="block-5"></div>
 
 
 
-</div>
+
 
 <?php include (dirname(__FILE__).'/parts/footer.php'); ?>

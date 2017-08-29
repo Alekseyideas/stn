@@ -43,42 +43,48 @@
                <nav>
                    <ul class="list-unstyled d-flex align-items-end justify-content-center">
                        <li>
-                           <a href="#">О КОМПАНИИ</a>
+                           <a href="#" id="company">О КОМПАНИИ</a>
                            <ul class="list-unstyled">
-                               <li><a href="#">О нас</a></li>
-                               <li><a href="#">Вакансии</a></li>
-                               <li><a href="#">Контакты</a></li>
+                               <li><a href="#" id="about-us">О нас</a></li>
+                               <li><a href="#" id="vacancy">Вакансии</a></li>
+                               <li><a href="#" id="contacts">Контакты</a></li>
                            </ul>
                        <li>
-                           <a href="#">Портфолио</a>
+                           <a href="#" id="portpholio">Портфолио</a>
 
                        </li>
                        <li>
-                           <a href="#">Партнерам</a>
+                           <a href="#" id="partners">Партнерам</a>
                            <ul class="list-unstyled">
-                               <li><a href="#">Cтать партнером</a></li>
-                               <li><a href="#">ТРЕНИНГИ И СЕМИНАРЫ</a></li>
-                               <li><a href="#">обратная связь</a></li>
+                               <li><a href="#" id="become_partner">Cтать партнером</a></li>
+                               <li><a href="#" id="trainings">ТРЕНИНГИ И СЕМИНАРЫ</a></li>
+                               <li><a href="#" id="call-back">обратная связь</a></li>
                            </ul>
                        </li>
                        <li>
-                           <a href="#">ВендОрам</a>
+                           <a href="#" id="vendors">ВендОрам</a>
                            <ul class="list-unstyled">
-                               <li><a href="#">преимущества для вендоров</a></li>
-                               <li><a href="#">презентация для вендоров</a></li>
+                               <li><a href="#" id="advantages
+">преимущества для вендоров</a></li>
+                               <li><a href="#" id="presentation
+">презентация для вендоров</a></li>
                            </ul>
                        </li>
                        <li>
-                           <a href="#">ПРЕСС-ЦЕНТР</a>
+                           <a href="#" target="_blank">ПРЕСС-ЦЕНТР</a>
                        </li>
                        <li>
-                           <a href="#">ВХОД НА ПОРТАЛ</a>
+                           <a href="#" id="enter" >ВХОД НА ПОРТАЛ</a>
                        </li>
                    </ul>
                </nav>
             </div>
-            <div class="col">
-                1
+            <div class="col" id="lang">
+                <ul class="d-flex justify-content-end list-unstyled">
+                    <li><a href="#">eng</a></li>
+                    <li><a href="#">kz</a></li>
+                    <li><a href="#" class="active">руc</a></li>
+                </ul>
             </div>
         </div>
 

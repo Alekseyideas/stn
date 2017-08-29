@@ -28,3 +28,7 @@ window.addEventListener('resize', function () {
         menu[i].querySelectorAll('ul li').length > 1 ? menu[i].className = 'has-sub-menu' : false;
     }
 })();
+
+$('.to-next-slide').click(function () {
+    $.scrollTo('#block-2', 500);
+});

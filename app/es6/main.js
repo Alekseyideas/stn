@@ -43,3 +43,11 @@ window.addEventListener('resize', function () {
 })();
 
 
+function scroll(from,to) {
+    $(from).click(function () {
+        $.scrollTo(to,500);
+    });
+}
+
+scroll('.to-next-slide','#block-2');
+
