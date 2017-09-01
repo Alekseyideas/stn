@@ -13,6 +13,12 @@ function HeightBlock() {
     var logo_height = logo.height;
 
     logo.style.marginTop = '-' + logo_height / 2 + 'px';
+
+    var text_block = document.getElementsByClassName('content-tab');
+
+    for (var _i = 0; _i < text_block.length; _i++) {
+        text_block[_i].style.height = win_height / 2 + 'px';
+    }
 }
 
 HeightBlock();
@@ -29,6 +35,64 @@ window.addEventListener('resize', function () {
     }
 })();
 
-$('.to-next-slide').click(function () {
-    $.scrollTo('#block-2', 500);
+function scroll(from, to) {
+    $(from).click(function () {
+        $.scrollTo(to, 500);
+    });
+}
+
+scroll('.to-next-slide', '#block-2');
+scroll('#company', '#block-2');
+scroll('.menu-logo', '#block-1');
+
+(function () {
+    var link = document.querySelectorAll('a');
+
+    for (var i = 0; i < link.length; i++) {
+        if (link[i].getAttribute('href') === '#') {
+            link[i].onclick = function (e) {
+                e.preventDefault();
+            };
+        }
+    }
+})();
+
+function tabs(x) {
+    var wrapper = document.getElementById(x);
+    var tab = wrapper.childNodes[1].children;
+    var content = wrapper.childNodes[3].children;
+
+    console.log(wrapper);
+    console.log(tab);
+    console.log(content);
+
+    var _loop = function _loop(i) {
+
+        var data_tab = tab[i].dataset['tab'];
+        var content_tab = document.getElementById('tab-' + data_tab);
+
+        tab[i].classList.contains('active') ? content_tab.style.display = 'block' : false;
+
+        tab[i].addEventListener('click', function () {
+            console.log(this.prototype);
+            for (var _i2 = 0; _i2 < tab.length; _i2++) {
+                tab[_i2].classList.remove('active');
+            }this.classList.add('active');
+
+            for (var _i3 = 0; _i3 < content.length; _i3++) {
+                content[_i3].style.display = 'none';
+            }content_tab.style.display = 'block';
+        });
+    };
+
+    for (var i = 0; i < tab.length; i++) {
+        _loop(i);
+    }
+}
+
+tabs('wr-tab-1');
+tabs('wr-tab-2');
+
+$('.content-tab').mCustomScrollbar({
+    theme: "rounded"
 });

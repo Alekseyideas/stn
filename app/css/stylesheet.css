@@ -31,7 +31,11 @@ a, button, input {
   background: url("../img/block-5.jpg") no-repeat center/cover; }
 
 .height-block {
-  position: relative; }
+  position: relative;
+  padding-top: 121px; }
+
+#block-1 {
+  padding: 0; }
 
 #main-logo {
   width: 50%;
@@ -143,6 +147,63 @@ nav {
     color: white; }
     #lang li a.active {
       color: #ff7c21; }
+
+.m-top-100 {
+  margin-top: 100px; }
+
+.tab {
+  width: 100%;
+  max-width: 300px;
+  background: #838383;
+  margin-bottom: 20px;
+  padding: 20px 44px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: white;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s; }
+  .tab:hover {
+    background: #ff7c21; }
+  .tab.active {
+    background: #ff7c21; }
+
+.content-tab {
+  display: none; }
+
+.content-tab {
+  overflow-x: auto; }
+
+._mCS_1 .mCSB_dragger .mCSB_dragger_bar {
+  background-color: white;
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+          box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+  width: 50px; }
+
+._mCS_1 .mCSB_dragger {
+  -webkit-border-radius: 50%;
+          border-radius: 50%; }
+
+.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
+  background-color: #fff4ed; }
+
+.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
+  background-color: #fff4ed; }
+
+.mCS-rounded.mCSB_scrollTools .mCSB_draggerRail {
+  background: #ff7c21; }
+
+#mCSB_1_scrollbar_vertical {
+  margin-right: 10px; }
+
+.mCS-rounded-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, .mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, .mCS-rounded-dots.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, .mCS-rounded.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  width: 30px;
+  margin: 0 -7px; }
+
+.mCS-rounded-dark.mCSB_scrollTools .mCSB_dragger, .mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger, .mCS-rounded-dots.mCSB_scrollTools .mCSB_dragger, .mCS-rounded.mCSB_scrollTools .mCSB_dragger {
+  height: 30px; }
 
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */
