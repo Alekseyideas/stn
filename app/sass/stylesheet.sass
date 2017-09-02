@@ -27,6 +27,8 @@ a,button,input
   background: url("../img/block-4.jpg") no-repeat center / cover
 #block-5
   background: url("../img/block-5.jpg") no-repeat center / cover
+#block-6
+  background: url("../img/block-6.jpg") no-repeat center / cover
 .height-block
   position: relative
   padding-top: 121px
@@ -156,27 +158,32 @@ nav
 .content-tab
   overflow-x: auto
 
-._mCS_1 .mCSB_dragger .mCSB_dragger_bar
-  background-color: white
-  box-shadow: inset 0 0 5px rgba(black,.5)
+
+
+.vendors
+  .mCSB_dragger .mCSB_dragger_bar
+    background-color: orange !important
+.mCSB_dragger .mCSB_dragger_bar
+  background-color: white !important
+  box-shadow: inset 0 0 5px rgba(black,.5) !important
   width: 50px
 
-._mCS_1 .mCSB_dragger
+.mCSB_dragger
   border-radius: 50%
 .mCSB_scrollTools
   .mCSB_dragger:hover
     .mCSB_dragger_bar
-      background-color: lighten($orange,40)
+      background-color: lighten($orange,30) !important
 
 
 
 .mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar
-  background-color: lighten($orange,40)
+  background-color: lighten($orange,30) !important
 
 .mCS-rounded.mCSB_scrollTools .mCSB_draggerRail
   background: $orange
 
-#mCSB_1_scrollbar_vertical
+.mCSB_scrollTools
   margin-right: 10px
 
 
@@ -187,4 +194,62 @@ nav
 .mCS-rounded-dark.mCSB_scrollTools .mCSB_dragger, .mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger, .mCS-rounded-dots.mCSB_scrollTools .mCSB_dragger, .mCS-rounded.mCSB_scrollTools .mCSB_dragger
   height: 30px
 
+
+
+.content-tab-title
+  font-size: 35px
+  margin-bottom: 20px
+.content-tab-text
+  line-height: 30px
+
+.vacancy
+  margin-bottom: 30px
+  &__title
+    font-size: 18px
+    margin-bottom: 10px
+  &__info
+    font-size: 14px
+    color: #909090
+    margin: 0
+  &__date
+    font-size: 14px
+    color: $orange
+    margin-top: 10px
+
+.contacts
+  margin: 0 0 30px
+  &__link
+    display: block
+    &--mTop
+      margin-top: 20px
+  &__title
+    font-size: 18px
+  &__info
+    font-size: 14px
+    color: lighten(black,40)
+    margin: 0
+
+
+.bottom-vendors
+  position: absolute
+  bottom: 0
+  width: 100%
+  background: white
+  padding: 20px 0
+
+.vendors
+  overflow-y: hidden
+  overflow-x: auto
+  .mCSB_dragger .mCSB_dragger_bar
+    background-color: orange !important
+
+  &__li
+    margin-right: 50px
+  &__img
+    filter: grayscale(100%)
+    transition: .5s
+  &__link
+    &:hover
+      img
+        filter: grayscale(0)
 @import "media"

@@ -42,7 +42,7 @@ function scroll(from, to) {
 }
 
 scroll('.to-next-slide', '#block-2');
-scroll('#company', '#block-2');
+scroll('#company,#about-us,#vacancy,#contacts', '#block-2');
 scroll('.menu-logo', '#block-1');
 
 (function () {
@@ -61,20 +61,16 @@ function tabs(x) {
     var wrapper = document.getElementById(x);
     var tab = wrapper.childNodes[1].children;
     var content = wrapper.childNodes[3].children;
-
-    console.log(wrapper);
-    console.log(tab);
-    console.log(content);
+    var link = document.getElementsByClassName('menu_link');
 
     var _loop = function _loop(i) {
 
         var data_tab = tab[i].dataset['tab'];
         var content_tab = document.getElementById('tab-' + data_tab);
 
-        tab[i].classList.contains('active') ? content_tab.style.display = 'block' : false;
-
+        // click event tab
         tab[i].addEventListener('click', function () {
-            console.log(this.prototype);
+
             for (var _i2 = 0; _i2 < tab.length; _i2++) {
                 tab[_i2].classList.remove('active');
             }this.classList.add('active');
@@ -83,6 +79,25 @@ function tabs(x) {
                 content[_i3].style.display = 'none';
             }content_tab.style.display = 'block';
         });
+
+        // click event top menu
+
+        var _loop2 = function _loop2(_x) {
+            link[_x].addEventListener('click', function () {
+
+                var id = link[_x].getAttribute('id');
+
+                var cur_tab = document.querySelectorAll('[data-tab=' + id + ']');
+
+                var content = document.getElementById('tab-' + id);
+
+                content ? cur_tab[0].click() : false;
+            });
+        };
+
+        for (var _x = 0; _x < link.length; _x++) {
+            _loop2(_x);
+        }tab[i].classList.contains('active') ? content_tab.style.display = 'block' : false;
     };
 
     for (var i = 0; i < tab.length; i++) {
@@ -95,4 +110,7 @@ tabs('wr-tab-2');
 
 $('.content-tab').mCustomScrollbar({
     theme: "rounded"
+});
+$('.vendors').mCustomScrollbar({
+    axis: "x"
 });

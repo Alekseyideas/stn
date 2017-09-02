@@ -52,8 +52,11 @@ function scroll(from,to) {
 }
 
 scroll('.to-next-slide','#block-2');
-scroll('#company','#block-2');
+scroll('#company,#about-us,#vacancy,#contacts','#block-2');
 scroll('.menu-logo','#block-1');
+
+
+
 
 
 (function () {
@@ -74,10 +77,11 @@ function tabs(x) {
     const wrapper = document.getElementById(x);
     const tab = wrapper.childNodes[1].children;
     const content = wrapper.childNodes[3].children;
+    const link = document.getElementsByClassName('menu_link');
 
-    console.log(wrapper);
-    console.log(tab);
-    console.log(content);
+
+
+
 
     for(let i = 0; i<tab.length; i++){
 
@@ -85,22 +89,38 @@ function tabs(x) {
         const data_tab = tab[i].dataset['tab'];
         const content_tab = document.getElementById(`tab-${data_tab}`);
 
-        tab[i].classList.contains('active') ? content_tab.style.display = 'block' : false;
 
+        // click event tab
+        tab[i].addEventListener('click', function () {
 
-        tab[i].addEventListener('click',function () {
-            console.log(this.prototype);
-            for ( let i = 0; i < tab.length; i++ ) tab[i].classList.remove('active');
+            for (let i = 0; i < tab.length; i++) tab[i].classList.remove('active');
 
             this.classList.add('active');
 
 
-            for( let i = 0; i<content.length; i++ ) content[i].style.display = 'none';
+            for (let i = 0; i < content.length; i++) content[i].style.display = 'none';
 
             content_tab.style.display = 'block';
 
 
         });
+
+        // click event top menu
+        for (let x=0; x<link.length; x++)
+            link[x].addEventListener('click', function () {
+
+                const id = link[x].getAttribute('id');
+
+                const cur_tab = document.querySelectorAll(`[data-tab=${id}]`);
+
+
+                const content = document.getElementById(`tab-${id}`);
+
+                content ? cur_tab[0].click() : false;
+            })
+
+        tab[i].classList.contains('active') ? content_tab.style.display = 'block' : false;
+
     }
 
 }
@@ -110,6 +130,9 @@ tabs('wr-tab-2');
 
 $('.content-tab').mCustomScrollbar({
     theme:"rounded"
+});
+$('.vendors').mCustomScrollbar({
+    axis:"x"
 });
 
 

@@ -30,6 +30,9 @@ a, button, input {
 #block-5 {
   background: url("../img/block-5.jpg") no-repeat center/cover; }
 
+#block-6 {
+  background: url("../img/block-6.jpg") no-repeat center/cover; }
+
 .height-block {
   position: relative;
   padding-top: 121px; }
@@ -176,26 +179,29 @@ nav {
 .content-tab {
   overflow-x: auto; }
 
-._mCS_1 .mCSB_dragger .mCSB_dragger_bar {
-  background-color: white;
-  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
-          box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+.vendors .mCSB_dragger .mCSB_dragger_bar {
+  background-color: orange !important; }
+
+.mCSB_dragger .mCSB_dragger_bar {
+  background-color: white !important;
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5) !important;
+          box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5) !important;
   width: 50px; }
 
-._mCS_1 .mCSB_dragger {
+.mCSB_dragger {
   -webkit-border-radius: 50%;
           border-radius: 50%; }
 
 .mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
-  background-color: #fff4ed; }
+  background-color: #ffd6ba !important; }
 
 .mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
-  background-color: #fff4ed; }
+  background-color: #ffd6ba !important; }
 
 .mCS-rounded.mCSB_scrollTools .mCSB_draggerRail {
   background: #ff7c21; }
 
-#mCSB_1_scrollbar_vertical {
+.mCSB_scrollTools {
   margin-right: 10px; }
 
 .mCS-rounded-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, .mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, .mCS-rounded-dots.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, .mCS-rounded.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
@@ -204,6 +210,64 @@ nav {
 
 .mCS-rounded-dark.mCSB_scrollTools .mCSB_dragger, .mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger, .mCS-rounded-dots.mCSB_scrollTools .mCSB_dragger, .mCS-rounded.mCSB_scrollTools .mCSB_dragger {
   height: 30px; }
+
+.content-tab-title {
+  font-size: 35px;
+  margin-bottom: 20px; }
+
+.content-tab-text {
+  line-height: 30px; }
+
+.vacancy {
+  margin-bottom: 30px; }
+  .vacancy__title {
+    font-size: 18px;
+    margin-bottom: 10px; }
+  .vacancy__info {
+    font-size: 14px;
+    color: #909090;
+    margin: 0; }
+  .vacancy__date {
+    font-size: 14px;
+    color: #ff7c21;
+    margin-top: 10px; }
+
+.contacts {
+  margin: 0 0 30px; }
+  .contacts__link {
+    display: block; }
+    .contacts__link--mTop {
+      margin-top: 20px; }
+  .contacts__title {
+    font-size: 18px; }
+  .contacts__info {
+    font-size: 14px;
+    color: #666666;
+    margin: 0; }
+
+.bottom-vendors {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: white;
+  padding: 20px 0; }
+
+.vendors {
+  overflow-y: hidden;
+  overflow-x: auto; }
+  .vendors .mCSB_dragger .mCSB_dragger_bar {
+    background-color: orange !important; }
+  .vendors__li {
+    margin-right: 50px; }
+  .vendors__img {
+    -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s; }
+  .vendors__link:hover img {
+    -webkit-filter: grayscale(0);
+            filter: grayscale(0); }
 
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */
