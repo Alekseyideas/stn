@@ -16,9 +16,10 @@ function HeightBlock() {
 
     const text_block = document.getElementsByClassName('content-tab');
 
-    for (let i = 0; i<text_block.length; i++) text_block[i].style.height = `${win_height/2}px`;
+    for (let i = 0; i<text_block.length; i++) text_block[i].style.height =  win_height < 700 ? `${win_height/2}px` : `${win_height/2}px`;
 
-
+    const m_top = document.getElementsByClassName('m-top-100');
+    for (let i = 0; i<m_top.length; i++) m_top[i].style.marginTop = win_height < 700 ? '10px' : '100px';
 
 
 
@@ -54,6 +55,7 @@ function scroll(from,to) {
 scroll('.to-next-slide','#block-2');
 scroll('#company,#about-us,#vacancy,#contacts','#block-2');
 scroll('.menu-logo','#block-1');
+scroll('#partners','#block-4');
 
 
 

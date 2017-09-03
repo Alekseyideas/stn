@@ -17,7 +17,10 @@ function HeightBlock() {
     var text_block = document.getElementsByClassName('content-tab');
 
     for (var _i = 0; _i < text_block.length; _i++) {
-        text_block[_i].style.height = win_height / 2 + 'px';
+        text_block[_i].style.height = win_height < 700 ? win_height / 2 + 'px' : win_height / 2 + 'px';
+    }var m_top = document.getElementsByClassName('m-top-100');
+    for (var _i2 = 0; _i2 < m_top.length; _i2++) {
+        m_top[_i2].style.marginTop = win_height < 700 ? '10px' : '100px';
     }
 }
 
@@ -44,6 +47,7 @@ function scroll(from, to) {
 scroll('.to-next-slide', '#block-2');
 scroll('#company,#about-us,#vacancy,#contacts', '#block-2');
 scroll('.menu-logo', '#block-1');
+scroll('#partners', '#block-4');
 
 (function () {
     var link = document.querySelectorAll('a');
@@ -71,12 +75,12 @@ function tabs(x) {
         // click event tab
         tab[i].addEventListener('click', function () {
 
-            for (var _i2 = 0; _i2 < tab.length; _i2++) {
-                tab[_i2].classList.remove('active');
+            for (var _i3 = 0; _i3 < tab.length; _i3++) {
+                tab[_i3].classList.remove('active');
             }this.classList.add('active');
 
-            for (var _i3 = 0; _i3 < content.length; _i3++) {
-                content[_i3].style.display = 'none';
+            for (var _i4 = 0; _i4 < content.length; _i4++) {
+                content[_i4].style.display = 'none';
             }content_tab.style.display = 'block';
         });
 

@@ -22,7 +22,7 @@
                 <div class="tab" data-tab="vacancy" id="something"><span>Вакансии</span></div>
                 <div class="tab" data-tab="contacts"><span>Контакты</span></div>
             </div>
-            <div class="col-md-5 ml-md-auto">
+            <div class="col-md-6 ml-md-auto">
                 <div class="content-tab" id="tab-about-us">
                     <h3 class="content-tab-title">О нас</h3>
                     <p class="content-tab-text">
@@ -197,14 +197,33 @@
     <div class="container m-top-100">
         <div class="row" id="wr-tab-2">
             <div class="col">
-                <div class="tab active" data-tab="about-us2"><span>О нас</span></div>
-                <div class="tab" data-tab="vacancy2"><span>Вакансии</span></div>
-                <div class="tab" data-tab="contacts2"><span>Контакты</span></div>
+                <div class="tab tab--pad active" data-tab="about-us2">
+                    <div class="d-flex align-items-center">
+                        <span class="tab__circle"><i class="fa fa-handshake-o" aria-hidden="true"></i></span>
+                        <span>стать партнером</span>
+                    </div>
+                </div>
+                <div class="tab tab--pad" data-tab="vacancy2">
+                    <div class="d-flex align-items-center">
+                        <span class="tab__circle"><i class="fa fa-graduation-cap" aria-hidden="true"></i></span>
+                        <span>ТРЕНИНГИ И СЕМИНАРЫ</span>
+                    </div>
+                </div>
+                <div class="tab tab--pad" data-tab="contacts2">
+                    <div class="d-flex align-items-center">
+                        <span class="tab__circle"><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
+                        <span>обратная связь</span>
+                    </div>
+                </div>
             </div>
             <div class="col-md-5 ml-md-auto">
-                <div class="content-tab" id="tab-about-us2">О нас2</div>
-                <div class="content-tab" id="tab-vacancy2">Вакансии</div>
-                <div class="content-tab" id="tab-contacts2">Контакты</div>
+                <div class="content-tab" id="tab-about-us2">
+                    <div class="partner">
+
+                    </div>
+                </div>
+                <div class="content-tab" id="tab-vacancy2">ТРЕНИНГИ И СЕМИНАРЫ</div>
+                <div class="content-tab" id="tab-contacts2">обратная связь</div>
             </div>
         </div>
     </div>
