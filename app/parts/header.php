@@ -41,7 +41,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-7">
+            <div class="col-8">
                <nav>
                    <ul class="list-unstyled d-flex align-items-end justify-content-center">
                        <li>
@@ -66,14 +66,19 @@
                        <li>
                            <a href="#" id="vendors">ВендОрам</a>
                            <ul class="list-unstyled">
-                               <li><a class="menu_link" href="#" id="advantages
-">преимущества для вендоров</a></li>
-                               <li><a class="menu_link" href="#" id="presentation
-">презентация для вендоров</a></li>
+                               <li><a class="menu_link" href="#" id="advantages">преимущества для вендоров</a></li>
+                               <li><a class="menu_link" href="#" id="presentation">презентация для вендоров</a></li>
                            </ul>
                        </li>
                        <li>
-                           <a href="#" class="menu_link" target="_blank">ПРЕСС-ЦЕНТР</a>
+                           <a href="#" class="menu_link" id="press">ПРЕСС-ЦЕНТР</a>
+                           <ul class="list-unstyled">
+                               <li><a class="menu_link" href="#" id="company-news">Новости компании</a></li>
+                               <li><a class="menu_link" href="#" id="vendor-news">Новости вендоров</a></li>
+                           </ul>
+                       </li>
+                       <li>
+                           <a href="#" class="menu_link" target="_blank">Каталог</a>
                        </li>
                        <li>
                            <a href="#" class="menu_link" id="enter" >ВХОД НА ПОРТАЛ</a>

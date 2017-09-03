@@ -47,7 +47,10 @@ function scroll(from, to) {
 scroll('.to-next-slide', '#block-2');
 scroll('#company,#about-us,#vacancy,#contacts', '#block-2');
 scroll('.menu-logo', '#block-1');
-scroll('#partners', '#block-4');
+scroll('#portpholio', '#block-3');
+scroll('#partners,#become_partner,#trainings,#call-back', '#block-4');
+scroll('#vendors,#advantages,#presentation', '#block-5');
+scroll('#press,#company-news,#vendor-news', '#block-6');
 
 (function () {
     var link = document.querySelectorAll('a');
@@ -111,6 +114,7 @@ function tabs(x) {
 
 tabs('wr-tab-1');
 tabs('wr-tab-2');
+tabs('wr-tab-3');
 
 $('.content-tab').mCustomScrollbar({
     theme: "rounded"
