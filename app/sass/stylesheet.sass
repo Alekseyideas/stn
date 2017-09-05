@@ -170,7 +170,7 @@ nav
 .content-tab
   display: none
 .content-tab
-  overflow-x: auto
+  //overflow-x: auto
 
 
 
@@ -326,4 +326,106 @@ nav
     text-transform: uppercase
     &:hover
       background: darken($orange,20)
+
+.news
+  &__title
+    color: white
+    text-transform: uppercase
+    font-size: 51px
+    text-align: center
+  &__subTitle
+    color: white
+    font-size: 14px
+    line-height: 28px
+    max-width: 745px
+    margin: 20px auto
+    text-align: center
+  &__tab
+    background: none
+    font-size: 15px
+    width: auto
+    padding: 5px 15px
+    color: white
+    &:hover
+      background: #f9f7f6
+      color: black
+    &.active
+      background: #dfdddc
+      color: black
+      &:hover
+        background: #dfdddc
+  &__wrapper
+    max-height: 400px
+    margin-top: 30px
+  &__item
+    display: block
+    color: white
+    padding: 5px 20px
+    transition: .2s
+    font-size: 14px
+    margin: 20px 0
+    &:first-child
+      margin-top: 0
+    &:hover
+      background: $orange
+      color: white
+      .news__date
+        color: white
+  &__date
+    color: $orange
+#tabs_news_wrapper
+  margin-bottom: 40px
+.fullStory
+  max-height: 400px
+  &__title
+    color: white
+    font-size: 30px
+    font-weight: normal
+    margin: 20px 0
+  &__img
+    margin: 10px auto
+    display: block
+  &__text
+    color: white
+    line-height: 25px
+.section__title
+  color: white
+  text-align: center
+  text-transform: uppercase
+  font-size: 50px
+.slider
+  margin-top: 40px
+  .owl-prev,
+  .owl-next
+    position: absolute
+    top: 45%
+    color: white
+    opacity: .5
+    font-size: 40px
+    &:hover
+     opacity: 1
+  .owl-prev
+    left: -40px
+  .owl-next
+    right: -40px
+
+.sliderContent
+  width: 300px
+  height: 270px
+  margin: 20px auto
+  &__img
+    width: 100%
+    height: 182px
+    overflow: hidden
+    img
+      width: 100%
+      height: auto
+  &__title
+    margin-top: 10px
+    color: white
+    text-transform: uppercase
+    font-size: 20px
+    line-height: 28px
+
+
 @import "media"

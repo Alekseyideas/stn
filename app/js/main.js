@@ -14,13 +14,13 @@ function HeightBlock() {
 
     logo.style.marginTop = '-' + logo_height / 2 + 'px';
 
-    var text_block = document.getElementsByClassName('content-tab');
+    var text_block = document.getElementsByClassName('scroll');
 
     for (var _i = 0; _i < text_block.length; _i++) {
-        text_block[_i].style.height = win_height < 700 ? win_height / 2 + 'px' : win_height / 2 + 'px';
+        text_block[_i].style.height = win_height < 800 ? win_height / 2 + 70 + 'px' : win_height / 2 + 'px';
     }var m_top = document.getElementsByClassName('m-top-100');
     for (var _i2 = 0; _i2 < m_top.length; _i2++) {
-        m_top[_i2].style.marginTop = win_height < 700 ? '10px' : '100px';
+        m_top[_i2].style.marginTop = win_height < 800 ? '10px' : '100px';
     }
 }
 
@@ -115,10 +115,35 @@ function tabs(x) {
 tabs('wr-tab-1');
 tabs('wr-tab-2');
 tabs('wr-tab-3');
+tabs('wr-tab-4');
 
-$('.content-tab').mCustomScrollbar({
+$('.scroll').mCustomScrollbar({
     theme: "rounded"
 });
 $('.vendors').mCustomScrollbar({
     axis: "x"
+});
+
+$('.slider').owlCarousel({
+    loop: true,
+    margin: 10,
+    autoplay: true,
+    responsiveClass: true,
+    navText: ['<i class="fa fa-chevron-left" aria-hidden="true"></i>', '<i class="fa fa-chevron-right" aria-hidden="true"></i>'],
+    responsive: {
+        0: {
+            items: 1,
+            nav: false,
+            dots: true
+
+        },
+        600: {
+            items: 2,
+            nav: false
+        },
+        1000: {
+            items: 3,
+            nav: true
+        }
+    }
 });

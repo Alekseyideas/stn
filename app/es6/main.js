@@ -14,12 +14,12 @@ function HeightBlock() {
 
     logo.style.marginTop = `-${logo_height/2}px`;
 
-    const text_block = document.getElementsByClassName('content-tab');
+    const text_block = document.getElementsByClassName('scroll');
 
-    for (let i = 0; i<text_block.length; i++) text_block[i].style.height =  win_height < 700 ? `${win_height/2}px` : `${win_height/2}px`;
+    for (let i = 0; i<text_block.length; i++) text_block[i].style.height =  win_height < 800 ? `${win_height/2 + 70}px` : `${win_height/2}px`;
 
     const m_top = document.getElementsByClassName('m-top-100');
-    for (let i = 0; i<m_top.length; i++) m_top[i].style.marginTop = win_height < 700 ? '10px' : '100px';
+    for (let i = 0; i<m_top.length; i++) m_top[i].style.marginTop = win_height < 800 ? '10px' : '100px';
 
 
 
@@ -135,12 +135,36 @@ function tabs(x) {
 tabs('wr-tab-1');
 tabs('wr-tab-2');
 tabs('wr-tab-3');
+tabs('wr-tab-4');
 
-$('.content-tab').mCustomScrollbar({
+$('.scroll').mCustomScrollbar({
     theme:"rounded"
 });
 $('.vendors').mCustomScrollbar({
     axis:"x"
 });
 
+$('.slider').owlCarousel({
+    loop:true,
+    margin:10,
+    autoplay:true,
+    responsiveClass:true,
+    navText:['<i class="fa fa-chevron-left" aria-hidden="true"></i>','<i class="fa fa-chevron-right" aria-hidden="true"></i>'],
+    responsive:{
+       0:{
+           items:1,
+           nav: false,
+           dots: true
+
+       },
+        600:{
+            items:2,
+            nav:false
+        },
+        1000:{
+            items:3,
+            nav:true
+        }
+    }
+});
 

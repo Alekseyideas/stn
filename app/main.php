@@ -23,7 +23,7 @@
                 <div class="tab" data-tab="contacts"><span>Контакты</span></div>
             </div>
             <div class="col-md-6 ml-md-auto">
-                <div class="content-tab" id="tab-about-us">
+                <div class="content-tab scroll" id="tab-about-us">
                     <h3 class="content-tab-title">О нас</h3>
                     <p class="content-tab-text">
                         Мы занимаемся дистрибуцией. Мы понимаем свое назначение, любим и умеем делать нашу работу. За многие годы присутствия на рынке телекоммуникационного и ИТ-оборудования был накоплен опыт и знания, которые позволяют понимать и удовлетворять потребности наших партнеров. Наш главный капитал – это честное имя и репутация надежного партнера.
@@ -41,7 +41,7 @@
                         Ценя ваше время, и относясь с уважением к вашему делу, мы всегда открыты для  диалога, в котором всегда сможем найти правильное решение любой задачи. Мы в этом уверены.
                     </p>
                 </div>
-                <div class="content-tab" id="tab-vacancy">
+                <div class="content-tab scroll" id="tab-vacancy">
 
                     <div class="vacancy">
                         <h4 class="vacancy__title">Lorem ipsum dolor sit</h4>
@@ -90,9 +90,9 @@
                     </div>
 
                 </div>
-                <div class="content-tab" id="tab-contacts">
+                <div class="content-tab scroll" id="tab-contacts">
 
-                    <h3 class="content-tab-title">Контакты</h3>
+                    <h3 class="content-tab scroll-title">Контакты</h3>
 
                     <div class="contacts">
                         <h3 class="contacts__title">Адрес офиса "ST Networks":</h3>
@@ -191,7 +191,116 @@
 
 
 <section class="height-block" id="block-3">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1 class="section__title">Портфолио</h1>
+                    <div class="slider owl-carousel">
+                        <div class="slider__item">
+                            <div class="sliderContent">
+                                <div class="sliderContent__img">
+                                    <img src="img/slider1.jpg" alt="slider">
+                                </div>
+                                <div class="sliderContent__title">
+                                  <span>Lorem ipsum dolor sit amet, consectetur </span>
+                                </div>
+                            </div>
 
+                            <div class="sliderContent">
+                                <div class="sliderContent__img">
+                                    <img src="img/slider1.jpg" alt="slider">
+                                </div>
+                                <div class="sliderContent__title">
+                                    <span>Lorem ipsum dolor sit amet, consectetur </span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="slider__item">
+                            <div class="sliderContent">
+                                <div class="sliderContent__img">
+                                    <img src="img/slider1.jpg" alt="slider">
+                                </div>
+                                <div class="sliderContent__title">
+                                    <span>Lorem ipsum dolor sit amet, consectetur </span>
+                                </div>
+                            </div>
+
+                            <div class="sliderContent">
+                                <div class="sliderContent__img">
+                                    <img src="img/slider1.jpg" alt="slider">
+                                </div>
+                                <div class="sliderContent__title">
+                                    <span>Lorem ipsum dolor sit amet, consectetur </span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="slider__item">
+                            <div class="sliderContent">
+                                <div class="sliderContent__img">
+                                    <img src="img/slider1.jpg" alt="slider">
+                                </div>
+                                <div class="sliderContent__title">
+                                    <span>Lorem ipsum dolor sit amet, consectetur </span>
+                                </div>
+                            </div>
+
+                            <div class="sliderContent">
+                                <div class="sliderContent__img">
+                                    <img src="img/slider1.jpg" alt="slider">
+                                </div>
+                                <div class="sliderContent__title">
+                                    <span>Lorem ipsum dolor sit amet, consectetur </span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="slider__item">
+                            <div class="sliderContent">
+                                <div class="sliderContent__img">
+                                    <img src="img/slider1.jpg" alt="slider">
+                                </div>
+                                <div class="sliderContent__title">
+                                    <span>Lorem ipsum dolor sit amet, consectetur </span>
+                                </div>
+                            </div>
+
+                            <div class="sliderContent">
+                                <div class="sliderContent__img">
+                                    <img src="img/slider1.jpg" alt="slider">
+                                </div>
+                                <div class="sliderContent__title">
+                                    <span>Lorem ipsum dolor sit amet, consectetur </span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="slider__item">
+                            <div class="sliderContent">
+                                <div class="sliderContent__img">
+                                    <img src="img/slider1.jpg" alt="slider">
+                                </div>
+                                <div class="sliderContent__title">
+                                    <span>Lorem ipsum dolor sit amet, consectetur </span>
+                                </div>
+                            </div>
+
+                            <div class="sliderContent">
+                                <div class="sliderContent__img">
+                                    <img src="img/slider1.jpg" alt="slider">
+                                </div>
+                                <div class="sliderContent__title">
+                                    <span>Lorem ipsum dolor sit amet, consectetur </span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
 </section>
 <section class="height-block" id="block-4">
     <div class="container m-top-100">
@@ -217,7 +326,7 @@
                 </div>
             </div>
             <div class="col-md-6 ml-md-auto">
-                <div class="content-tab" id="tab-become_partner">
+                <div class="content-tab scroll" id="tab-become_partner">
                     <h3 class="partner__title"> Преимущества работы с нами </h3>
                     <div class="partner">
                         <h4 class="partner__subtitle">Любой наш партнер является ключевым</h4>
@@ -258,7 +367,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="content-tab" id="tab-trainings">
+                <div class="content-tab scroll" id="tab-trainings">
                     <div class="training">
                         <img src="img/blackboard.png" alt="" class="training__img">
                         <h3 class="training__title">ТРЕНИНГИ И СЕМИНАРЫ</h3>
@@ -278,7 +387,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="content-tab" id="tab-call-back">
+                <div class="content-tab scroll" id="tab-call-back">
                     <form action="" class="partnerForm">
                         <div class="form-group">
                             <h2 class="partnerForm__title">Личные данные</h2>
@@ -341,7 +450,7 @@
 
             </div>
             <div class="col-md-6 ml-md-auto">
-                <div class="content-tab" id="tab-advantages">
+                <div class="content-tab scroll" id="tab-advantages">
                     <h3 class="partner__title"> Преимущества работы с нами </h3>
                     <div class="partner">
                         <h4 class="partner__subtitle">Любой наш партнер является ключевым</h4>
@@ -385,7 +494,7 @@
 
 
                 </div>
-                <div class="content-tab" id="tab-presentation">
+                <div class="content-tab scroll" id="tab-presentation">
                     2
                 </div>
             </div>
@@ -454,18 +563,96 @@
 <section class="height-block" id="block-6">
     <div class="container">
         <div class="row">
+
+
             <div class="col-12">
-                <div class="news">
+                <div class="news" >
                     <h1 class="news__title">Новости</h1>
-                    <p class="news__subTitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem </p>
+                    <p class="news__subTitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+
+                    <div id="wr-tab-4">
 
 
-                    <div class="tab news__tab active" data-tab="company-news">
-                        <span>Новости компании</span>
+                        <div class="d-flex justify-content-center align-items-center" id="tabs_news_wrapper">
+                            <div class="tab news__tab active" data-tab="company-news">
+                                <span>Новости компании</span>
+                            </div>
+                            <div class="tab news__tab" data-tab="vendor-news">
+                                <span>Новости вендоров</span>
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+                            <div class="content-tab" id="tab-company-news">
+                                <div class="row">
+                                    <div class="col-md-6">
+
+                                        <div class="news__wrapper scroll">
+                                            <a href="#" class="news__item">
+                                                <div class="news__text">Lorem ipsum dolor sit amet</div>
+                                                <div class="news__date">22.08.2017</div>
+                                            </a>
+                                            <a href="#" class="news__item">
+                                                <div class="news__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci consequatur delectus </div>
+                                                <div class="news__date">22.08.2017</div>
+                                            </a>
+                                            <a href="#" class="news__item">
+                                                <div class="news__text">eos expedita facere fugiat illum ipsum minus necessitatibus perferendis, perspiciatis porro praesentium quasi quo ratione sequi tenetur voluptas!</div>
+                                                <div class="news__date">22.08.2017</div>
+                                            </a>
+                                            <a href="#" class="news__item">
+                                                <div class="news__text">Lorem ipsum dolor sit ametorem ipsum dolor sit ametorem ipsum dolor sit amet</div>
+                                                <div class="news__date">22.08.2017</div>
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="fullStory scroll">
+                                            <h1 class="fullStory__title">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do</h1>
+                                            <img src="img/full-img.jpg" alt="full" class="fullStory__img">
+                                            <p class="fullStory__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                                                <br><br>
+                                                aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo<br><br> inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam<br><br> est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                            <div class="content-tab" id="tab-vendor-news">
+                                <div class="news__wrapper">
+                                    <a href="#" class="news__item">
+                                        <div class="news__text">23123</div>
+                                        <div class="news__date">22.08.2017</div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+
+
+
                     </div>
-                    <div class="tab news__tab" data-tab="vendor-news">
-                        <span>Новости вендоров</span>
+
+
+
                     </div>
+
+
+
+
+
+
+
 
                 </div>
             </div>
