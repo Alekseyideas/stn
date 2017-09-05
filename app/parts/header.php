@@ -42,22 +42,22 @@
                     </div>
                 </div>
             </div>
-            <div class="col-8">
+            <div id="main-menu">
                <nav>
                    <ul class="list-unstyled d-flex align-items-end justify-content-center">
                        <li>
-                           <a href="#" class="menu_link" id="company">О КОМПАНИИ</a>
+                           <a href="#" class="menu_link main_link" id="company">О КОМПАНИИ</a>
                            <ul class="list-unstyled">
                                <li><a class="menu_link" href="#" id="about-us">О нас</a></li>
                                <li><a class="menu_link" href="#" id="vacancy">Вакансии</a></li>
                                <li><a class="menu_link" href="#" id="contacts">Контакты</a></li>
                            </ul>
                        <li>
-                           <a href="#" class="menu_link" id="portpholio">Портфолио</a>
+                           <a href="#" class="menu_link main_link" id="portpholio">Портфолио</a>
 
                        </li>
                        <li>
-                           <a href="#" id="partners">Партнерам</a>
+                           <a href="#" class="main_link" id="partners">Партнерам</a>
                            <ul class="list-unstyled">
                                <li><a class="menu_link" href="#" id="become_partner">Cтать партнером</a></li>
                                <li><a class="menu_link" href="#" id="trainings">ТРЕНИНГИ И СЕМИНАРЫ</a></li>
@@ -65,14 +65,14 @@
                            </ul>
                        </li>
                        <li>
-                           <a href="#" id="vendors">ВендОрам</a>
+                           <a href="#" class="main_link" id="vendors">ВендОрам</a>
                            <ul class="list-unstyled">
                                <li><a class="menu_link" href="#" id="advantages">преимущества для вендоров</a></li>
                                <li><a class="menu_link" href="#" id="presentation">презентация для вендоров</a></li>
                            </ul>
                        </li>
                        <li>
-                           <a href="#" class="menu_link" id="press">ПРЕСС-ЦЕНТР</a>
+                           <a href="#" class="menu_link main_link" id="press">ПРЕСС-ЦЕНТР</a>
                            <ul class="list-unstyled">
                                <li><a class="menu_link" href="#" id="company-news">Новости компании</a></li>
                                <li><a class="menu_link" href="#" id="vendor-news">Новости вендоров</a></li>
@@ -82,7 +82,7 @@
                            <a href="#" class="menu_link" target="_blank">Каталог</a>
                        </li>
                        <li>
-                           <a href="#" class="menu_link" id="enter" >ВХОД НА ПОРТАЛ</a>
+                           <a href="#" class="menu_link main_link" id="enter" >ВХОД НА ПОРТАЛ</a>
                        </li>
                    </ul>
                </nav>
@@ -94,6 +94,10 @@
                     <li><a href="#" class="active">руc</a></li>
                 </ul>
             </div>
+            <div class="col" id="mobile-menu">
+               <button id="btn_menu"><i class="fa fa-bars" aria-hidden="true"></i></button>
+            </div>
+
         </div>
 
     </div>

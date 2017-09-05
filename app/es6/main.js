@@ -1,11 +1,14 @@
 console.log('Ready !');
 
+
 function HeightBlock() {
+    console.log(window.innerHeight + 'x' +window.innerWidth);
     const block = document.getElementsByClassName('height-block');
     const win_height = window.innerHeight;
+    const win_width = window.innerWidth;
 
     for(let i = 0; i<block.length; i++)
-        block[i].style.height = `${win_height}px`;
+        block[i].style.minHeight = win_width > 767 ? `${win_height}px` : 'auto';
 
 
     const logo = document.getElementById('main-logo');
@@ -15,20 +18,90 @@ function HeightBlock() {
     logo.style.marginTop = `-${logo_height/2}px`;
 
     const text_block = document.getElementsByClassName('scroll');
-
-    for (let i = 0; i<text_block.length; i++) text_block[i].style.height =  win_height < 800 ? `${win_height/2 + 70}px` : `${win_height/2}px`;
-
     const m_top = document.getElementsByClassName('m-top-100');
+
+    if(win_width > 767){
+        for (let i = 0; i<text_block.length; i++) text_block[i].style.height =  win_height < 800 ? `${win_height/2 + 70}px` : `${win_height/2}px`;
+
+    }
+
+
+
     for (let i = 0; i<m_top.length; i++) m_top[i].style.marginTop = win_height < 800 ? '10px' : '100px';
 
 
 
 
 
+    if(win_width > 767){
+        $('.scroll').mCustomScrollbar({
+            theme:"rounded"
+        });
+        $('.vendors').mCustomScrollbar({
+            axis:"x"
+        });
+    }
+
 }
 
 HeightBlock();
+const block_2 = document.getElementById('block-2');
+const block_3 = document.getElementById('block-3');
+const block_4 = document.getElementById('block-4');
+const block_5 = document.getElementById('block-5');
+const block_6 = document.getElementById('block-6');
+const block_7 = document.getElementById('block-7');
+const links = document.getElementsByClassName('menu_link');
 
+let blocks = [
+    'block-2',
+    'block-3',
+    'block-4',
+    'block-5',
+    'block-6',
+    'block-7',
+];
+const main_link = document.getElementsByClassName('main_link');
+const main_block = document.getElementsByClassName('height-block');
+main_block
+
+
+function detectScroll(number) {
+
+
+    if (window.pageYOffset > block_2.offsetTop && window.pageYOffset < block_3.offsetTop){
+        for (let i = 0; i < links.length; i++)
+            links[i].style.color = '#0ea4f4'
+        document.getElementById('company').style.color = '#ff7c21';
+    }
+}
+
+window.onscroll = function () {
+    for (let x = 1; x < 8; x++){
+       // main_link[x].style.color = '#ff7c21';
+       // console.log(main_link[x]);
+        if (window.pageYOffset > main_block[x].offsetTop && window.pageYOffset < main_block[x+1].offsetTop){
+            for (let i = 0; i < links.length; i++)
+                links[i].style.color = '#0ea4f4'
+            main_link[x-1].style.color = '#ff7c21';
+        }
+
+    }
+/*
+    if (window.pageYOffset > block_2.offsetTop && window.pageYOffset < block_3.offsetTop){
+        for (let i = 0; i < links.length; i++)
+            links[i].style.color = '#0ea4f4'
+        document.getElementById('company').style.color = '#ff7c21';
+    }
+    if (window.pageYOffset > block_3.offsetTop-1 && window.pageYOffset < block_4.offsetTop-1){
+        for (let i = 0; i < links.length; i++)
+            links[i].style.color = '#0ea4f4'
+        document.getElementById('portpholio').style.color = '#ff7c21';
+    }
+*/
+
+
+};
 
 window.addEventListener('resize', function () {
     HeightBlock();
@@ -137,12 +210,12 @@ tabs('wr-tab-2');
 tabs('wr-tab-3');
 tabs('wr-tab-4');
 
-$('.scroll').mCustomScrollbar({
-    theme:"rounded"
-});
-$('.vendors').mCustomScrollbar({
-    axis:"x"
-});
+
+
+
+
+
+
 
 $('.slider').owlCarousel({
     loop:true,

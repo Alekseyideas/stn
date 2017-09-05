@@ -605,6 +605,22 @@
                                                 <div class="news__text">Lorem ipsum dolor sit ametorem ipsum dolor sit ametorem ipsum dolor sit amet</div>
                                                 <div class="news__date">22.08.2017</div>
                                             </a>
+                                            <a href="#" class="news__item">
+                                                <div class="news__text">Lorem ipsum dolor sit amet</div>
+                                                <div class="news__date">22.08.2017</div>
+                                            </a>
+                                            <a href="#" class="news__item">
+                                                <div class="news__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci consequatur delectus </div>
+                                                <div class="news__date">22.08.2017</div>
+                                            </a>
+                                            <a href="#" class="news__item">
+                                                <div class="news__text">eos expedita facere fugiat illum ipsum minus necessitatibus perferendis, perspiciatis porro praesentium quasi quo ratione sequi tenetur voluptas!</div>
+                                                <div class="news__date">22.08.2017</div>
+                                            </a>
+                                            <a href="#" class="news__item">
+                                                <div class="news__text">Lorem ipsum dolor sit ametorem ipsum dolor sit ametorem ipsum dolor sit amet</div>
+                                                <div class="news__date">22.08.2017</div>
+                                            </a>
                                         </div>
 
                                     </div>
@@ -662,8 +678,8 @@
 </section>
 
 
+<section class="height-block" id="block-7">
 
-
-
+</section>
 
 <?php include (dirname(__FILE__).'/parts/footer.php'); ?>

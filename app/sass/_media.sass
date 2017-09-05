@@ -23,19 +23,60 @@
     font-size: 30px
   #tabs_news_wrapper
     margin: 0
+  .news__wrapper
+    max-height: 300px
+
+  .fullStory
+    max-height: 300px
+    margin-top: 20px
+    &__title
+      margin: 0 0 20px
+@media only screen and (max-width : 1400px)
+  .logo-tel
+    a
+      font-size: 12px
+  .menu-logo
+    width: 45%
+@media only screen and (max-width : 1350px)
+  .menu-logo
+    width: 60%
+  nav
+    ul
+      li
+        a
+          font-size: 12px
+  .logo-tel a
+    display: none
 @media only screen and (max-width : 1200px)
-	/**/
+  nav
+    ul
+      li
+        a
+          font-size: 10px
 
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
-	/**/
-
-
+  #main-menu
+    display: none
+  .menu-logo
+    width: 50%
+    margin-left: 0
+    img
+      max-height: 40px
+      width: 100px
+      margin-left: 0
+  #lang
+    display: none
 /* Small Devices, Tablets */
-@media only screen and (max-width : 768px)
-	/**/
+@media only screen and (max-width : 767px)
+  .news__wrapper
+    max-height: inherit
 
+  .fullStory
+    max-height: inherit
+  .bottom-vendors
+    display: none
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
@@ -66,16 +107,18 @@
 
 
 /* Medium Devices, Desktops */
-@media only screen and (min-width : 992px)
-	/**/
-
+@media only screen and (min-width : 993px)
+  #mobile-menu
+    display: none
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px)
 	/**/
+@media only screen and (min-width : 1366px)
+	/**/
 
 /* Large Devices, Wide Screens */
-@media only screen and (min-width : 1600px)
+@media only screen and (min-width : 1900px)
   body
     font-size: 16px
 
