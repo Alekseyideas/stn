@@ -1,6 +1,6 @@
 <?php include (dirname(__FILE__).'/parts/header.php'); ?>
 
-<section class="height-block text-center" id="block-1">
+<section class="section height-block" id="block-1">
 
     <img src="img/logo.svg" alt="logo" id="main-logo" class="animated zoomIn">
 
@@ -10,20 +10,17 @@
     </div>
 
 </section>
-
-
-
-
-<section class="height-block" id="block-2">
+<section class="section height-block" id="block-2">
+    <input type="hidden" name="id" value="1" />
     <div class="container m-top-100">
         <div class="row" id="wr-tab-1">
-            <div class="col">
-                <div class="tab active" data-tab="about-us"><span>О нас</span></div>
-                <div class="tab" data-tab="vacancy" id="something"><span>Вакансии</span></div>
-                <div class="tab" data-tab="contacts"><span>Контакты</span></div>
+            <div class="col" >
+                <div class="tab active  wow  slideInLeft" data-wow-duration="1s" data-wow-delay=".2s" data-tab="about-us"><span>О нас</span></div>
+                <div class="tab wow  slideInLeft" data-wow-duration="1s" data-wow-delay=".5s" data-tab="vacancy" id="something"><span>Вакансии</span></div>
+                <div class="tab wow  slideInLeft" data-wow-duration="1s" data-wow-delay=".8s" data-tab="contacts"><span>Контакты</span></div>
             </div>
             <div class="col-md-6 ml-md-auto">
-                <div class="content-tab scroll" id="tab-about-us">
+                <div class="content-tab scroll  wow  slideInRight" data-wow-duration="1s" data-wow-delay=".2s" id="tab-about-us">
                     <h3 class="content-tab-title">О нас</h3>
                     <p class="content-tab-text">
                         Мы занимаемся дистрибуцией. Мы понимаем свое назначение, любим и умеем делать нашу работу. За многие годы присутствия на рынке телекоммуникационного и ИТ-оборудования был накоплен опыт и знания, которые позволяют понимать и удовлетворять потребности наших партнеров. Наш главный капитал – это честное имя и репутация надежного партнера.
@@ -188,16 +185,14 @@
     </div>
 
 </section>
-
-
-<section class="height-block" id="block-3">
+<section class="section height-block" id="block-3">
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <h1 class="section__title">Портфолио</h1>
+                    <!--<h1 class="section__title">Портфолио</h1>-->
                     <div class="slider owl-carousel">
                         <div class="slider__item">
-                            <div class="sliderContent">
+                            <div class="sliderContent wow  flipInY" data-wow-duration=".5s" data-wow-delay=".1s">
                                 <div class="sliderContent__img">
                                     <img src="img/slider1.jpg" alt="slider">
                                 </div>
@@ -206,7 +201,7 @@
                                 </div>
                             </div>
 
-                            <div class="sliderContent">
+                            <div class="sliderContent wow  flipInY" data-wow-duration=".5s" data-wow-delay=".3s">
                                 <div class="sliderContent__img">
                                     <img src="img/slider1.jpg" alt="slider">
                                 </div>
@@ -217,7 +212,7 @@
 
                         </div>
                         <div class="slider__item">
-                            <div class="sliderContent">
+                            <div class="sliderContent wow  flipInY" data-wow-duration=".5s" data-wow-delay=".5s">
                                 <div class="sliderContent__img">
                                     <img src="img/slider1.jpg" alt="slider">
                                 </div>
@@ -226,27 +221,7 @@
                                 </div>
                             </div>
 
-                            <div class="sliderContent">
-                                <div class="sliderContent__img">
-                                    <img src="img/slider1.jpg" alt="slider">
-                                </div>
-                                <div class="sliderContent__title">
-                                    <span>Lorem ipsum dolor sit amet, consectetur </span>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="slider__item">
-                            <div class="sliderContent">
-                                <div class="sliderContent__img">
-                                    <img src="img/slider1.jpg" alt="slider">
-                                </div>
-                                <div class="sliderContent__title">
-                                    <span>Lorem ipsum dolor sit amet, consectetur </span>
-                                </div>
-                            </div>
-
-                            <div class="sliderContent">
+                            <div class="sliderContent wow  flipInY" data-wow-duration=".5s" data-wow-delay=".7s">
                                 <div class="sliderContent__img">
                                     <img src="img/slider1.jpg" alt="slider">
                                 </div>
@@ -257,7 +232,7 @@
 
                         </div>
                         <div class="slider__item">
-                            <div class="sliderContent">
+                            <div class="sliderContent wow  flipInY" data-wow-duration=".5s" data-wow-delay=".9s">
                                 <div class="sliderContent__img">
                                     <img src="img/slider1.jpg" alt="slider">
                                 </div>
@@ -266,7 +241,7 @@
                                 </div>
                             </div>
 
-                            <div class="sliderContent">
+                            <div class="sliderContent wow  flipInY" data-wow-duration=".5s" data-wow-delay="1.1s">
                                 <div class="sliderContent__img">
                                     <img src="img/slider1.jpg" alt="slider">
                                 </div>
@@ -277,7 +252,7 @@
 
                         </div>
                         <div class="slider__item">
-                            <div class="sliderContent">
+                            <div class="sliderContent wow  flipInY" data-wow-duration=".5s" data-wow-delay="1.3s">
                                 <div class="sliderContent__img">
                                     <img src="img/slider1.jpg" alt="slider">
                                 </div>
@@ -286,7 +261,27 @@
                                 </div>
                             </div>
 
-                            <div class="sliderContent">
+                            <div class="sliderContent wow  flipInY" data-wow-duration=".5s" data-wow-delay="1.5s">
+                                <div class="sliderContent__img">
+                                    <img src="img/slider1.jpg" alt="slider">
+                                </div>
+                                <div class="sliderContent__title">
+                                    <span>Lorem ipsum dolor sit amet, consectetur </span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="slider__item">
+                            <div class="sliderContent wow  flipInY" data-wow-duration=".5s" data-wow-delay="1.7s">
+                                <div class="sliderContent__img">
+                                    <img src="img/slider1.jpg" alt="slider">
+                                </div>
+                                <div class="sliderContent__title">
+                                    <span>Lorem ipsum dolor sit amet, consectetur </span>
+                                </div>
+                            </div>
+
+                            <div class="sliderContent wow  flipInY" data-wow-duration=".5s" data-wow-delay="1.9s">
                                 <div class="sliderContent__img">
                                     <img src="img/slider1.jpg" alt="slider">
                                 </div>
@@ -302,32 +297,32 @@
             </div>
         </div>
 </section>
-<section class="height-block" id="block-4">
+<section class="section height-block" id="block-4">
     <div class="container m-top-100">
         <div class="row" id="wr-tab-2">
             <div class="col">
-                <div class="tab tab--pad " data-tab="become_partner">
+                <div class="tab tab--pad active wow  slideInLeft" data-wow-duration="1s" data-wow-delay=".1s" data-tab="become_partner">
                     <div class="d-flex align-items-center">
                         <span class="tab__circle"><i class="fa fa-handshake-o" aria-hidden="true"></i></span>
                         <span>стать партнером</span>
                     </div>
                 </div>
-                <div class="tab tab--pad" data-tab="trainings">
+                <div class="tab tab--pad wow  slideInLeft" data-wow-duration="1s" data-wow-delay=".2s" data-tab="trainings">
                     <div class="d-flex align-items-center">
                         <span class="tab__circle"><i class="fa fa-graduation-cap" aria-hidden="true"></i></span>
                         <span>ТРЕНИНГИ И СЕМИНАРЫ</span>
                     </div>
                 </div>
-                <div class="tab tab--pad active" data-tab="call-back">
+                <div class="tab tab--pad  wow  slideInLeft" data-wow-duration="1s" data-wow-delay=".3s" data-tab="call-back">
                     <div class="d-flex align-items-center">
                         <span class="tab__circle"><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
                         <span>обратная связь</span>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 ml-md-auto">
-                <div class="content-tab scroll" id="tab-become_partner">
-                    <h3 class="partner__title"> Преимущества работы с нами </h3>
+            <div class="col-md-6 ml-md-auto wow slideInRight">
+                <div class="content-tab scroll " id="tab-become_partner">
+                    <h3 class="partner__title "> Преимущества работы с нами </h3>
                     <div class="partner">
                         <h4 class="partner__subtitle">Любой наш партнер является ключевым</h4>
                         <p class="partner__info">Для нас равно важны все компании малого, среднего, национального и глобально масштаба, поскольку все они помогают нам в достижении успеха на определенном уровне рынка. Поэтому в отношении каждого исповедуется принцип клиент-ориентированного подхода, с предоставляем преимуществ в зависимости от присвоенного статуса партнера. Мы поддерживаем своих партнеров и предлагаем им возможности для развития – ведь их рост повышает емкость нашего рынка.</p>
@@ -437,14 +432,14 @@
         </div>
     </div>
 </section>
-<section class="height-block" id="block-5">
+<section class="section height-block" id="block-5">
     <div class="container m-top-100">
         <div class="row" id="wr-tab-3">
             <div class="col">
-                <div class="tab tab--pad-2 active" data-tab="advantages">
+                <div class="tab tab--pad-2 active wow  slideInDown" data-tab="advantages">
                     <span>преимущества для вендоров</span>
                 </div>
-                <div class="tab tab--pad-2" data-tab="presentation">
+                <div class="tab tab--pad-2 wow  slideInUp" data-tab="presentation">
                     <span>презентация для вендоров</span>
                 </div>
 
@@ -560,7 +555,7 @@
         </div>
     </div>
 </section>
-<section class="height-block" id="block-6">
+<section class="section height-block" id="block-6">
     <div class="container">
         <div class="row">
 
@@ -676,9 +671,36 @@
         </div>
     </div>
 </section>
+<section class="section height-block" id="block-7">
 
+ <div class="container">
+     <div class="row">
 
-<section class="height-block" id="block-7">
+         <div class="col">
+             <div class="enter">
+                 <div class="enter__logo">
+                     <img src="img/logo.svg" alt="logo">
+                 </div>
+
+                 <form action="" class="enter__form">
+                     <div class="enter__text">Для доступа на дилерский портал требуется авторизация</div>
+                     <div class="form-group">
+                         <input type="text" placeholder="Логин" class="enter__input">
+                     </div>
+                     <div class="form-group">
+                         <input type="password" placeholder="Пароль" class="enter__input">
+                     </div>
+                     <a href="#">Забыли пароль</a>
+                     <div class="form-group">
+                         <button class="enter__btn">Войти</button>
+                     </div>
+                    <div class="enter__text">Чтобы стать партнером компании<a href="#">  пройдите по ссылке</a></div>
+                     <div class="enter__text">Стратегия нашей компании – обеспечение удобства работы с нами, ради чего мы готовы рассматривать нестандартные условия, и придерживаться оптимальной для клиента схемы поставок.</div>
+                 </form>
+             </div>
+         </div>
+     </div>
+ </div>
 
 </section>
 

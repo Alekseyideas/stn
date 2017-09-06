@@ -23,6 +23,7 @@
 
     <link rel="stylesheet" href="plugins/scroll/jquery.mCustomScrollbar.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.4/jquery.fullpage.min.css">
     <link rel="stylesheet" href="css/stylesheet.css?<?php echo rand()?>">
 
 </head>
@@ -44,45 +45,43 @@
             </div>
             <div id="main-menu">
                <nav>
-                   <ul class="list-unstyled d-flex align-items-end justify-content-center">
-                       <li>
-                           <a href="#" class="menu_link main_link" id="company">О КОМПАНИИ</a>
-                           <ul class="list-unstyled">
+                   <ul class="list-unstyled d-flex align-items-end justify-content-center" id="menu">
+                        <li data-menuanchor="firstPage"><a href="#firstPage"></a></li>
+                       <li data-menuanchor="secondPage">
+                           <a href="#secondPage" class="menu_link main_link">О КОМПАНИИ</a>
+                           <!--<ul class="list-unstyled">
                                <li><a class="menu_link" href="#" id="about-us">О нас</a></li>
                                <li><a class="menu_link" href="#" id="vacancy">Вакансии</a></li>
                                <li><a class="menu_link" href="#" id="contacts">Контакты</a></li>
-                           </ul>
-                       <li>
-                           <a href="#" class="menu_link main_link" id="portpholio">Портфолио</a>
+                           </ul>-->
+                       </li>
+                       <li  data-menuanchor="3rdPage">
+                           <a href="#3rdPage" class="menu_link main_link">Портфолио</a>
 
                        </li>
-                       <li>
-                           <a href="#" class="main_link" id="partners">Партнерам</a>
-                           <ul class="list-unstyled">
+                       <li data-menuanchor="4thPage">
+                           <a href="#4thPage" class="main_link">Партнерам</a>
+                           <!--<ul class="list-unstyled">
                                <li><a class="menu_link" href="#" id="become_partner">Cтать партнером</a></li>
                                <li><a class="menu_link" href="#" id="trainings">ТРЕНИНГИ И СЕМИНАРЫ</a></li>
                                <li><a class="menu_link" href="#" id="call-back">обратная связь</a></li>
-                           </ul>
+                           </ul>-->
                        </li>
-                       <li>
-                           <a href="#" class="main_link" id="vendors">ВендОрам</a>
-                           <ul class="list-unstyled">
+                       <li  data-menuanchor="5thPage">
+                           <a href="#5thPage" class="main_link">ВендОрам</a>
+                           <!--<ul class="list-unstyled">
                                <li><a class="menu_link" href="#" id="advantages">преимущества для вендоров</a></li>
                                <li><a class="menu_link" href="#" id="presentation">презентация для вендоров</a></li>
-                           </ul>
+                           </ul>-->
                        </li>
-                       <li>
-                           <a href="#" class="menu_link main_link" id="press">ПРЕСС-ЦЕНТР</a>
-                           <ul class="list-unstyled">
-                               <li><a class="menu_link" href="#" id="company-news">Новости компании</a></li>
-                               <li><a class="menu_link" href="#" id="vendor-news">Новости вендоров</a></li>
-                           </ul>
+                       <li data-menuanchor="6thPage">
+                           <a href="#6thPage" class="menu_link main_link" >ПРЕСС-ЦЕНТР</a>
                        </li>
                        <li>
                            <a href="#" class="menu_link" target="_blank">Каталог</a>
                        </li>
-                       <li>
-                           <a href="#" class="menu_link main_link" id="enter" >ВХОД НА ПОРТАЛ</a>
+                       <li data-menuanchor="lastPage">
+                           <a href="#lastPage" class="menu_link main_link" >ВХОД НА ПОРТАЛ</a>
                        </li>
                    </ul>
                </nav>
@@ -102,3 +101,6 @@
 
     </div>
 </header>
+
+<main id="fullpage">
+

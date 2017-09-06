@@ -6,21 +6,22 @@
 @media only screen and (max-height : 830px)
   .m-top-100
     margin-top: 50px
-  .height-block
-    padding-top: 100px
+  //.height-block
+    //padding-top: 100px
   .sliderContent
     width: 251px
     height: 227px
     &__img
       height: 152px
     &__title
-      margin-top: 5px
+      margin-top: 15px
       color: white
       text-transform: uppercase
       font-size: 20px
       line-height: 28px
   .news__title
     font-size: 30px
+    margin-top: 60px
   #tabs_news_wrapper
     margin: 0
   .news__wrapper
@@ -56,7 +57,14 @@
 
 
 /* Medium Devices, Desktops */
-@media only screen and (max-width : 992px)
+@media only screen and (max-width : 1000px)
+  .content-tab
+    margin-bottom: 200px
+  .col-md-6
+    flex: 0 0 100% !important
+    max-width: 100% !important
+  .height-block
+    padding-top: 100px
   #main-menu
     display: none
   .menu-logo
@@ -121,9 +129,22 @@
 @media only screen and (min-width : 1900px)
   body
     font-size: 16px
-
+  .logo-tel
+    a
+      font-size: 20px
   nav
     ul
       li
         position: relative
         margin: 0 20px
+
+@media only screen and (min-height : 600px)
+  .enter
+    margin: 80px auto 0
+
+@media only screen and (min-height : 1000px)
+  .news__title
+    margin-top: 90px
+
+  .enter
+    margin: 140px auto 0

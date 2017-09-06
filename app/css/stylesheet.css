@@ -37,8 +37,7 @@ a, button, input {
   background: url("../img/block-7.jpg") no-repeat center/cover; }
 
 .height-block {
-  position: relative;
-  padding-top: 121px; }
+  position: relative; }
 
 #block-1 {
   padding: 0; }
@@ -55,6 +54,7 @@ a, button, input {
   position: absolute;
   bottom: 20px;
   left: 50%;
+  margin-left: -25px;
   width: 50px;
   height: 50px;
   border: 1px solid white;
@@ -78,6 +78,8 @@ header {
   width: 100%;
   padding: 20px 0;
   background: rgba(0, 0, 0, 0.4); }
+  header .active a {
+    color: #ff7c21; }
 
 .menu-logo {
   width: 50%; }
@@ -246,7 +248,8 @@ nav {
   margin-bottom: 30px; }
   .vacancy__title {
     font-size: 18px;
-    margin-bottom: 10px; }
+    margin-bottom: 10px;
+    margin-top: 40px; }
   .vacancy__info {
     font-size: 14px;
     color: #909090;
@@ -480,26 +483,66 @@ nav {
   color: white;
   outline: 0; }
 
+.enter {
+  width: 100%;
+  max-width: 650px;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 20px;
+  margin: auto; }
+  .enter a {
+    color: #ff7c21;
+    text-decoration: underline; }
+  .enter__logo {
+    width: 100px;
+    margin: auto; }
+  .enter__form {
+    max-width: 600px;
+    margin: 10px auto; }
+  .enter__input {
+    display: block;
+    width: 100%;
+    border: 0;
+    height: 45px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 10px; }
+  .enter__text {
+    margin: 20px 0; }
+  .enter__btn {
+    background: #ff7c21;
+    color: white;
+    width: 180px;
+    height: 45px;
+    border: 0;
+    margin: 20px 0 0;
+    -webkit-border-radius: 5px;
+            border-radius: 5px;
+    cursor: pointer;
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s; }
+    .enter__btn:hover {
+      background: #ed6100; }
+
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */
 @media only screen and (max-height: 830px) {
   .m-top-100 {
     margin-top: 50px; }
-  .height-block {
-    padding-top: 100px; }
   .sliderContent {
     width: 251px;
     height: 227px; }
     .sliderContent__img {
       height: 152px; }
     .sliderContent__title {
-      margin-top: 5px;
+      margin-top: 15px;
       color: white;
       text-transform: uppercase;
       font-size: 20px;
       line-height: 28px; }
   .news__title {
-    font-size: 30px; }
+    font-size: 30px;
+    margin-top: 60px; }
   #tabs_news_wrapper {
     margin: 0; }
   .news__wrapper {
@@ -529,7 +572,17 @@ nav {
     font-size: 10px; } }
 
 /* Medium Devices, Desktops */
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 1000px) {
+  .content-tab {
+    margin-bottom: 200px; }
+  .col-md-6 {
+    -webkit-box-flex: 0 !important;
+    -webkit-flex: 0 0 100% !important;
+        -ms-flex: 0 0 100% !important;
+            flex: 0 0 100% !important;
+    max-width: 100% !important; }
+  .height-block {
+    padding-top: 100px; }
   #main-menu {
     display: none; }
   .menu-logo {
@@ -589,6 +642,18 @@ nav {
 @media only screen and (min-width: 1900px) {
   body {
     font-size: 16px; }
+  .logo-tel a {
+    font-size: 20px; }
   nav ul li {
     position: relative;
     margin: 0 20px; } }
+
+@media only screen and (min-height: 600px) {
+  .enter {
+    margin: 80px auto 0; } }
+
+@media only screen and (min-height: 1000px) {
+  .news__title {
+    margin-top: 90px; }
+  .enter {
+    margin: 140px auto 0; } }

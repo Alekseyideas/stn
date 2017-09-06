@@ -2,12 +2,13 @@ console.log('Ready !');
 
 
 function HeightBlock() {
-    const block = document.getElementsByClassName('height-block');
+    const block = document.getElementById('block-1');
     const win_height = window.innerHeight;
     const win_width = window.innerWidth;
-
-    for(let i = 0; i<block.length; i++)
-        block[i].style.minHeight = win_width > 767 ? `${win_height}px` : 'auto';
+    block.style.minHeight = win_width < 1000 ? `${win_height}px` : false;
+    //block.style.minHeight = win_width > 767 ? `${win_height}px` : 'auto';
+    //for(let i = 0; i<block.length; i++)
+        //block[i].style.minHeight = win_width > 767 ? `${win_height}px` : 'auto';
 
 
     const logo = document.getElementById('main-logo');
@@ -19,7 +20,7 @@ function HeightBlock() {
     const text_block = document.getElementsByClassName('scroll');
     const m_top = document.getElementsByClassName('m-top-100');
 
-    if(win_width > 767){
+    if(win_width > 1000){
         for (let i = 0; i<text_block.length; i++) text_block[i].style.height =  win_height < 800 ? `${win_height/2 + 70}px` : `${win_height/2}px`;
 
     }
@@ -32,7 +33,7 @@ function HeightBlock() {
 
 
 
-    if(win_width > 767){
+    if(win_width > 1000){
         $('.scroll').mCustomScrollbar({
             theme:"rounded"
         });
@@ -44,39 +45,6 @@ function HeightBlock() {
 }
 
 HeightBlock();
-const block_2 = document.getElementById('block-2');
-const block_3 = document.getElementById('block-3');
-const block_4 = document.getElementById('block-4');
-const block_5 = document.getElementById('block-5');
-const block_6 = document.getElementById('block-6');
-const block_7 = document.getElementById('block-7');
-const links = document.getElementsByClassName('menu_link');
-
-let blocks = [
-    'block-1',
-    'block-2',
-    'block-3',
-    'block-4',
-    'block-5',
-    'block-6',
-    'block-7',
-];
-const main_link = document.getElementsByClassName('main_link');
-const main_block = document.getElementsByClassName('height-block');
-
-
-
-window.onscroll = function () {
-    for (let i = 0; i < main_link.length; i++){
-        main_link[i].style.color = '#0EA4F4';
-    }
-
-    if (window.pageYOffset > main_block[1].offsetTop && window.pageYOffset < main_block[2].offsetTop){
-        main_link[0].style.color = '#FF7C21';
-    }
-
-
-};
 
 window.addEventListener('resize', function () {
     HeightBlock();
@@ -100,7 +68,7 @@ function scroll(from,to) {
     });
 }
 
-scroll('.to-next-slide','#block-2');
+
 scroll('#company,#about-us,#vacancy,#contacts','#block-2');
 scroll('.menu-logo','#block-1');
 scroll('#portpholio','#block-3');
@@ -215,4 +183,17 @@ $('.slider').owlCarousel({
         }
     }
 });
+$(document).ready(function() {
+    if(window.innerWidth > 1000){
+        $('#fullpage').fullpage({
+            anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage', '5thPage','6thPage','lastPage'],
+            menu: '#menu',
+            scrollingSpeed: 1000,
+            scrollBar:true
+        });
+        scroll('.to-next-slide','#block-2');
+    }
 
+
+    new WOW().init();
+});

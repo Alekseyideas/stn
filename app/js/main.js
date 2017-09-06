@@ -3,13 +3,16 @@
 console.log('Ready !');
 
 function HeightBlock() {
-    var block = document.getElementsByClassName('height-block');
+    var block = document.getElementById('block-1');
     var win_height = window.innerHeight;
     var win_width = window.innerWidth;
+    block.style.minHeight = win_width < 1000 ? win_height + 'px' : false;
+    //block.style.minHeight = win_width > 767 ? `${win_height}px` : 'auto';
+    //for(let i = 0; i<block.length; i++)
+    //block[i].style.minHeight = win_width > 767 ? `${win_height}px` : 'auto';
 
-    for (var i = 0; i < block.length; i++) {
-        block[i].style.minHeight = win_width > 767 ? win_height + 'px' : 'auto';
-    }var logo = document.getElementById('main-logo');
+
+    var logo = document.getElementById('main-logo');
 
     var logo_height = logo.height;
 
@@ -18,15 +21,15 @@ function HeightBlock() {
     var text_block = document.getElementsByClassName('scroll');
     var m_top = document.getElementsByClassName('m-top-100');
 
-    if (win_width > 767) {
-        for (var _i = 0; _i < text_block.length; _i++) {
-            text_block[_i].style.height = win_height < 800 ? win_height / 2 + 70 + 'px' : win_height / 2 + 'px';
+    if (win_width > 1000) {
+        for (var i = 0; i < text_block.length; i++) {
+            text_block[i].style.height = win_height < 800 ? win_height / 2 + 70 + 'px' : win_height / 2 + 'px';
         }
     }
 
-    for (var _i2 = 0; _i2 < m_top.length; _i2++) {
-        m_top[_i2].style.marginTop = win_height < 800 ? '10px' : '100px';
-    }if (win_width > 767) {
+    for (var _i = 0; _i < m_top.length; _i++) {
+        m_top[_i].style.marginTop = win_height < 800 ? '10px' : '100px';
+    }if (win_width > 1000) {
         $('.scroll').mCustomScrollbar({
             theme: "rounded"
         });
@@ -37,27 +40,6 @@ function HeightBlock() {
 }
 
 HeightBlock();
-var block_2 = document.getElementById('block-2');
-var block_3 = document.getElementById('block-3');
-var block_4 = document.getElementById('block-4');
-var block_5 = document.getElementById('block-5');
-var block_6 = document.getElementById('block-6');
-var block_7 = document.getElementById('block-7');
-var links = document.getElementsByClassName('menu_link');
-
-var blocks = ['block-1', 'block-2', 'block-3', 'block-4', 'block-5', 'block-6', 'block-7'];
-var main_link = document.getElementsByClassName('main_link');
-var main_block = document.getElementsByClassName('height-block');
-
-window.onscroll = function () {
-    for (var i = 0; i < main_link.length; i++) {
-        main_link[i].style.color = '#0EA4F4';
-    }
-
-    if (window.pageYOffset > main_block[1].offsetTop && window.pageYOffset < main_block[2].offsetTop) {
-        main_link[0].style.color = '#FF7C21';
-    }
-};
 
 window.addEventListener('resize', function () {
     HeightBlock();
@@ -77,7 +59,6 @@ function scroll(from, to) {
     });
 }
 
-scroll('.to-next-slide', '#block-2');
 scroll('#company,#about-us,#vacancy,#contacts', '#block-2');
 scroll('.menu-logo', '#block-1');
 scroll('#portpholio', '#block-3');
@@ -111,12 +92,12 @@ function tabs(x) {
         // click event tab
         tab[i].addEventListener('click', function () {
 
-            for (var _i3 = 0; _i3 < tab.length; _i3++) {
-                tab[_i3].classList.remove('active');
+            for (var _i2 = 0; _i2 < tab.length; _i2++) {
+                tab[_i2].classList.remove('active');
             }this.classList.add('active');
 
-            for (var _i4 = 0; _i4 < content.length; _i4++) {
-                content[_i4].style.display = 'none';
+            for (var _i3 = 0; _i3 < content.length; _i3++) {
+                content[_i3].style.display = 'none';
             }content_tab.style.display = 'block';
         });
 
@@ -172,4 +153,17 @@ $('.slider').owlCarousel({
             nav: true
         }
     }
+});
+$(document).ready(function () {
+    if (window.innerWidth > 1000) {
+        $('#fullpage').fullpage({
+            anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage', '5thPage', '6thPage', 'lastPage'],
+            menu: '#menu',
+            scrollingSpeed: 1000,
+            scrollBar: true
+        });
+        scroll('.to-next-slide', '#block-2');
+    }
+
+    new WOW().init();
 });
