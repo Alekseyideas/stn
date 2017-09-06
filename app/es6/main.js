@@ -2,7 +2,6 @@ console.log('Ready !');
 
 
 function HeightBlock() {
-    console.log(window.innerHeight + 'x' +window.innerWidth);
     const block = document.getElementsByClassName('height-block');
     const win_height = window.innerHeight;
     const win_width = window.innerWidth;
@@ -54,6 +53,7 @@ const block_7 = document.getElementById('block-7');
 const links = document.getElementsByClassName('menu_link');
 
 let blocks = [
+    'block-1',
     'block-2',
     'block-3',
     'block-4',
@@ -63,42 +63,17 @@ let blocks = [
 ];
 const main_link = document.getElementsByClassName('main_link');
 const main_block = document.getElementsByClassName('height-block');
-main_block
 
 
-function detectScroll(number) {
-
-
-    if (window.pageYOffset > block_2.offsetTop && window.pageYOffset < block_3.offsetTop){
-        for (let i = 0; i < links.length; i++)
-            links[i].style.color = '#0ea4f4'
-        document.getElementById('company').style.color = '#ff7c21';
-    }
-}
 
 window.onscroll = function () {
-    for (let x = 1; x < 8; x++){
-       // main_link[x].style.color = '#ff7c21';
-       // console.log(main_link[x]);
-        if (window.pageYOffset > main_block[x].offsetTop && window.pageYOffset < main_block[x+1].offsetTop){
-            for (let i = 0; i < links.length; i++)
-                links[i].style.color = '#0ea4f4'
-            main_link[x-1].style.color = '#ff7c21';
-        }
+    for (let i = 0; i < main_link.length; i++){
+        main_link[i].style.color = '#0EA4F4';
+    }
 
+    if (window.pageYOffset > main_block[1].offsetTop && window.pageYOffset < main_block[2].offsetTop){
+        main_link[0].style.color = '#FF7C21';
     }
-/*
-    if (window.pageYOffset > block_2.offsetTop && window.pageYOffset < block_3.offsetTop){
-        for (let i = 0; i < links.length; i++)
-            links[i].style.color = '#0ea4f4'
-        document.getElementById('company').style.color = '#ff7c21';
-    }
-    if (window.pageYOffset > block_3.offsetTop-1 && window.pageYOffset < block_4.offsetTop-1){
-        for (let i = 0; i < links.length; i++)
-            links[i].style.color = '#0ea4f4'
-        document.getElementById('portpholio').style.color = '#ff7c21';
-    }
-*/
 
 
 };
