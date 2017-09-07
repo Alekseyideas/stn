@@ -20,8 +20,11 @@
                 <div class="tab wow  slideInLeft" data-wow-duration="1s" data-wow-delay=".8s" data-tab="contacts"><span>Контакты</span></div>
             </div>
             <div class="col-md-6 ml-md-auto">
-                <div class="content-tab scroll  wow  slideInRight" data-wow-duration="1s" data-wow-delay=".2s" id="tab-about-us">
-                    <h3 class="content-tab-title">О нас</h3>
+
+                <div class="content-tab  wow  slideInRight" data-wow-duration="1s" data-wow-delay=".2s" id="tab-about-us">
+
+                    <h3 class="content-tab-title wow  slideInDown" data-wow-duration="1s" data-wow-delay=".2s">О нас</h3>
+                    <div class="scroll">
                     <p class="content-tab-text">
                         Мы занимаемся дистрибуцией. Мы понимаем свое назначение, любим и умеем делать нашу работу. За многие годы присутствия на рынке телекоммуникационного и ИТ-оборудования был накоплен опыт и знания, которые позволяют понимать и удовлетворять потребности наших партнеров. Наш главный капитал – это честное имя и репутация надежного партнера.
                         <br>
@@ -37,6 +40,7 @@
                         <br>
                         Ценя ваше время, и относясь с уважением к вашему делу, мы всегда открыты для  диалога, в котором всегда сможем найти правильное решение любой задачи. Мы в этом уверены.
                     </p>
+                    </div>
                 </div>
                 <div class="content-tab scroll" id="tab-vacancy">
 
@@ -490,7 +494,10 @@
 
                 </div>
                 <div class="content-tab scroll" id="tab-presentation">
-                    2
+                    <h4 class="partner__subtitle">Если кратко, то партнерство с нами, это:</h4>
+                    <p class="partner__info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam dolore ea facere iure laudantium libero, mollitia nobis nostrum quaerat quidem recusandae reiciendis sequi similique sit sunt tempora ut voluptas voluptate?
+                    </p>
+                    <button id="btn__show-presentation">Ознакомится c презентацией</button>
                 </div>
             </div>
         </div>
@@ -554,6 +561,16 @@
 
         </div>
     </div>
+
+    <div class="popUp__bg"></div>
+    <div class="vendors__presentation animated ">
+        <button class="popUp__close"><i class="fa fa-times" aria-hidden="true"></i></button>
+        <iframe src="img/pdf.pdf" frameborder="0"></iframe>
+    </div>
+
+
+
+
 </section>
 <section class="section height-block" id="block-6">
     <div class="container">
@@ -695,7 +712,7 @@
                          <button class="enter__btn">Войти</button>
                      </div>
                     <div class="enter__text">Чтобы стать партнером компании<a href="#">  пройдите по ссылке</a></div>
-                     <div class="enter__text">Стратегия нашей компании – обеспечение удобства работы с нами, ради чего мы готовы рассматривать нестандартные условия, и придерживаться оптимальной для клиента схемы поставок.</div>
+
                  </form>
              </div>
          </div>

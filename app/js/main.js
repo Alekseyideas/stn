@@ -11,7 +11,7 @@ function HeightBlock() {
     //for(let i = 0; i<block.length; i++)
     //block[i].style.minHeight = win_width > 767 ? `${win_height}px` : 'auto';
 
-
+    var presetation = document.getElementsByClassName('vendors__presentation')[0];
     var logo = document.getElementById('main-logo');
 
     var logo_height = logo.height;
@@ -23,12 +23,13 @@ function HeightBlock() {
 
     if (win_width > 1000) {
         for (var i = 0; i < text_block.length; i++) {
-            text_block[i].style.height = win_height < 800 ? win_height / 2 + 70 + 'px' : win_height / 2 + 'px';
+            text_block[i].style.height = win_height < 800 ? win_height / 2 - 70 + 'px' : win_height / 2 - 50 + 'px';
         }
     }
 
+    presetation.style.marginLeft = '-' + presetation.offsetWidth / 2 + 'px';
     for (var _i = 0; _i < m_top.length; _i++) {
-        m_top[_i].style.marginTop = win_height < 800 ? '10px' : '100px';
+        m_top[_i].style.marginTop = win_height < 800 ? '10px' : '70px';
     }if (win_width > 1000) {
         $('.scroll').mCustomScrollbar({
             theme: "rounded"
@@ -165,5 +166,18 @@ $(document).ready(function () {
         scroll('.to-next-slide', '#block-2');
     }
 
+    $('#btn__show-presentation').click(function () {
+        $('.vendors__presentation').removeClass('fadeOutLeft').addClass('fadeInLeft').css('left', '50%');
+        $('.popUp__bg').show();
+    });
+    $('.popUp__close').click(function () {
+        $('.popUp__bg').hide();
+        $('.vendors__presentation').removeClass('fadeInLeft').addClass('fadeOutLeft');
+        setTimeout(function () {
+            $('.vendors__presentation').css('left', '-50%');
+        }, 1000);
+    });
     new WOW().init();
 });
+
+console.log(window.innerHeight);

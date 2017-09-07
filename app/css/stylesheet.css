@@ -524,6 +524,61 @@ nav {
     .enter__btn:hover {
       background: #ed6100; }
 
+.popUp__close {
+  color: #ff7c21;
+  text-shadow: 0 0 5px black;
+  position: absolute;
+  top: -50px;
+  right: 0;
+  background: none;
+  border: 0px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  font-size: 25px;
+  outline: 0; }
+  .popUp__close:hover {
+    color: #ed6100; }
+  .popUp__close:focus {
+    outline: 0; }
+
+.popUp__bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  display: none; }
+
+.vendors__presentation {
+  position: absolute;
+  top: 50%;
+  left: -50%;
+  height: 100%;
+  width: 90%;
+  max-width: 960px;
+  margin-top: -15%; }
+  .vendors__presentation iframe {
+    width: 100%;
+    height: 50%; }
+
+#btn__show-presentation {
+  background: #ff7c21;
+  color: white;
+  border: 0;
+  padding: 10px 20px;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s;
+  cursor: pointer; }
+  #btn__show-presentation:hover {
+    background: #ed6100; }
+
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */
 @media only screen and (max-height: 830px) {
@@ -633,7 +688,8 @@ nav {
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width: 1200px) {
-  /**/ }
+  .content-tab-title {
+    margin-top: -70px; } }
 
 @media only screen and (min-width: 1366px) {
   /**/ }
@@ -652,7 +708,7 @@ nav {
   .enter {
     margin: 80px auto 0; } }
 
-@media only screen and (min-height: 1000px) {
+@media only screen and (min-height: 950px) {
   .news__title {
     margin-top: 90px; }
   .enter {
