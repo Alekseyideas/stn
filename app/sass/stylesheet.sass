@@ -85,6 +85,9 @@ header
 .logo-tel
   a
     color: $blue
+    position: absolute
+    bottom: 0
+    white-space: nowrap
 nav
   height: 100%
   display: none
@@ -170,6 +173,8 @@ nav
     display: block
     background: white
     width: 50px
+    min-width: 50px
+    max-width: 50px
     height: 50px
     border-radius: 50%
     margin-right: 10px
@@ -227,12 +232,20 @@ nav
 .content-tab-title
   font-size: 35px
   margin-bottom: 20px
+  color: $orange
+  font-weight: bold
+  text-shadow: 0 2px 3px rgba(black,.5)
+  text-transform: uppercase
 
 .content-tab-text
   line-height: 30px
 
 .vacancy
   margin-bottom: 30px
+  &:first-child
+    margin-top: 0
+    .vacancy__title
+      margin-top: 0
   &__title
     font-size: 18px
     margin-bottom: 10px
@@ -349,6 +362,10 @@ nav
     text-transform: uppercase
     font-size: 51px
     text-align: center
+    color: $orange
+    font-weight: bold
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.5)
+    margin-bottom: 20px
   &__subTitle
     color: white
     font-size: 14px
@@ -366,13 +383,15 @@ nav
       background: #f9f7f6
       color: black
     &.active
-      background: #dfdddc
-      color: black
+      //background: #dfdddc
+      //color: black
       &:hover
-        background: #dfdddc
+        background: $orange
+        color: white
   &__wrapper
     //max-height: 400px
     margin-top: 30px
+    max-width: 600px
   &__item
     display: block
     color: white
@@ -393,11 +412,12 @@ nav
   margin-bottom: 40px
 .fullStory
   //max-height: 400px
+  margin-top: 25px
   &__title
     color: white
     font-size: 30px
     font-weight: normal
-    margin: 20px 0
+    margin: 0 0 20px
   &__img
     margin: 10px auto
     display: block
@@ -537,4 +557,70 @@ nav
   cursor: pointer
   &:hover
     background: darken($orange,10)
+
+.brandBook
+  .owl-dots
+    width: 100%
+    text-align: center
+  .owl-dot
+    display: inline-block
+    margin: 10px 5px
+    span
+      display: block
+      width: 20px
+      height: 20px
+      background: rgb(255, 255, 255)
+      border-radius: 50%
+    &.active
+      span
+        background: $orange
+  .owl-nav
+    .owl-next,
+    .owl-prev
+      position: absolute
+      top: 50%
+      color: white
+      font-size: 50px
+      margin-top: -35px
+      opacity: .5
+      &:hover
+        opacity: 1
+    .owl-next
+      right: -80px
+    .owl-prev
+      left: -80px
+
+
+.m-lang
+  position: absolute
+  bottom: 0
+  width: 100%
+  background: black
+  ul
+    margin-bottom: 0
+  li
+    border-right: 1px solid white
+    width: 100%
+    height: 100%
+    &:last-child
+      border: 0
+  a
+    color: white
+    display: block
+    width: 100%
+    text-align: center
+    padding: 10px 0
+    font-size: 18px
+    &.active
+      background: $orange
+
+.mCSB_scrollTools
+  opacity: 1 !important
+.m-close-menu
+  color: white
+  position: absolute
+  right: 10px
+  top: 10px
+  font-size: 25px
+  z-index: 10
 @import "media"

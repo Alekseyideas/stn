@@ -39,21 +39,17 @@
                         <div class="menu-logo">
                             <img src="img/logo.svg" alt="logo">
                         </div>
-                        <a href="tel:+77273330999" class="ds">+7  (727)  333  0  999</a>
+                        <a href="tel:+77273330999" class="headerPhone">+7  (727)  333  0  999</a>
                     </div>
                 </div>
             </div>
             <div id="main-menu">
+                <div class="m-close-menu"><i class="fa fa-times" aria-hidden="true"></i></div>
                <nav>
                    <ul class="list-unstyled d-flex align-items-end justify-content-center" id="menu">
                         <li data-menuanchor="firstPage"><a href="#firstPage"></a></li>
                        <li data-menuanchor="secondPage">
                            <a href="#secondPage" class="menu_link main_link">О КОМПАНИИ</a>
-                           <!--<ul class="list-unstyled">
-                               <li><a class="menu_link" href="#" id="about-us">О нас</a></li>
-                               <li><a class="menu_link" href="#" id="vacancy">Вакансии</a></li>
-                               <li><a class="menu_link" href="#" id="contacts">Контакты</a></li>
-                           </ul>-->
                        </li>
                        <li  data-menuanchor="3rdPage">
                            <a href="#3rdPage" class="menu_link main_link">Портфолио</a>
@@ -61,18 +57,10 @@
                        </li>
                        <li data-menuanchor="4thPage">
                            <a href="#4thPage" class="main_link">Партнерам</a>
-                           <!--<ul class="list-unstyled">
-                               <li><a class="menu_link" href="#" id="become_partner">Cтать партнером</a></li>
-                               <li><a class="menu_link" href="#" id="trainings">ТРЕНИНГИ И СЕМИНАРЫ</a></li>
-                               <li><a class="menu_link" href="#" id="call-back">обратная связь</a></li>
-                           </ul>-->
                        </li>
                        <li  data-menuanchor="5thPage">
                            <a href="#5thPage" class="main_link">ВендОрам</a>
-                           <!--<ul class="list-unstyled">
-                               <li><a class="menu_link" href="#" id="advantages">преимущества для вендоров</a></li>
-                               <li><a class="menu_link" href="#" id="presentation">презентация для вендоров</a></li>
-                           </ul>-->
+
                        </li>
                        <li data-menuanchor="6thPage">
                            <a href="#6thPage" class="menu_link main_link" >ПРЕСС-ЦЕНТР</a>
@@ -85,6 +73,14 @@
                        </li>
                    </ul>
                </nav>
+                <div class="m-lang">
+
+                    <ul class="d-flex justify-content-between list-unstyled">
+                        <li><a href="#">eng</a></li>
+                        <li><a href="#">kz</a></li>
+                        <li><a href="#" class="active">руc</a></li>
+                    </ul>
+                </div>
             </div>
             <div class="col" id="lang">
                 <ul class="d-flex justify-content-end list-unstyled">

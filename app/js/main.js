@@ -7,13 +7,21 @@ function HeightBlock() {
     var win_height = window.innerHeight;
     var win_width = window.innerWidth;
     block.style.minHeight = win_width < 1000 ? win_height + 'px' : false;
-    //block.style.minHeight = win_width > 767 ? `${win_height}px` : 'auto';
-    //for(let i = 0; i<block.length; i++)
-    //block[i].style.minHeight = win_width > 767 ? `${win_height}px` : 'auto';
+
+    var logoImage = $('.menu-logo img');
+    var firstLink = $('li[data-menuanchor="secondPage"] a');
+    var phone = $('.headerPhone');
+
+    var logoImageWidth = logoImage.width();
+
+    var mLeft = (firstLink.offset().left - logoImageWidth - logoImage.offset().left) / 2;
+    console.log(phone.width());
+    phone.css({
+        left: logoImageWidth + mLeft + logoImage.offset().left - phone.width() / 2 + 'px'
+    });
 
     var presetation = document.getElementsByClassName('vendors__presentation')[0];
     var logo = document.getElementById('main-logo');
-
     var logo_height = logo.height;
 
     logo.style.marginTop = '-' + logo_height / 2 + 'px';
@@ -60,12 +68,20 @@ function scroll(from, to) {
     });
 }
 
-scroll('#company,#about-us,#vacancy,#contacts', '#block-2');
+var company = $('li[data-menuanchor="secondPage"]');
+var portgolio = $('li[data-menuanchor="3rdPage"]');
+var partner = $('li[data-menuanchor="4thPage"]');
+var vendor = $('li[data-menuanchor="5thPage"]');
+var press = $('li[data-menuanchor="6thPage"]');
+var enter = $('li[data-menuanchor="lastPage"]');
+
 scroll('.menu-logo', '#block-1');
-scroll('#portpholio', '#block-3');
-scroll('#partners,#become_partner,#trainings,#call-back', '#block-4');
-scroll('#vendors,#advantages,#presentation', '#block-5');
-scroll('#press,#company-news,#vendor-news', '#block-6');
+scroll(company, '#block-2');
+scroll(portgolio, '#block-3');
+scroll(partner, '#block-4');
+scroll(vendor, '#block-5');
+scroll(press, '#block-6');
+scroll(enter, '#block-7');
 
 (function () {
     var link = document.querySelectorAll('a');
@@ -132,6 +148,20 @@ tabs('wr-tab-2');
 tabs('wr-tab-3');
 tabs('wr-tab-4');
 
+$('.brandBook').owlCarousel({
+    items: 1,
+    dots: true,
+    navText: ['<i class="fa fa-chevron-left" aria-hidden="true"></i>', '<i class="fa fa-chevron-right" aria-hidden="true"></i>'],
+    responsive: {
+        600: {
+            nav: false
+        },
+        1000: {
+            nav: true
+        }
+    }
+});
+
 $('.slider').owlCarousel({
     loop: true,
     margin: 10,
@@ -156,6 +186,7 @@ $('.slider').owlCarousel({
     }
 });
 $(document).ready(function () {
+
     if (window.innerWidth > 1000) {
         $('#fullpage').fullpage({
             anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage', '5thPage', '6thPage', 'lastPage'],
@@ -178,6 +209,14 @@ $(document).ready(function () {
         }, 1000);
     });
     new WOW().init();
-});
 
-console.log(window.innerHeight);
+    $('.m-close-menu').click(function () {
+        $('#main-menu').css('left', '-100%');
+    });
+    $('#btn_menu').click(function () {
+        $('#main-menu').css('left', '0');
+    });
+    $('#menu li').click(function () {
+        $('.m-close-menu').click();
+    });
+});

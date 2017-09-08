@@ -15,9 +15,28 @@
     <div class="container m-top-100">
         <div class="row" id="wr-tab-1">
             <div class="col" >
-                <div class="tab active  wow  slideInLeft" data-wow-duration="1s" data-wow-delay=".2s" data-tab="about-us"><span>О нас</span></div>
-                <div class="tab wow  slideInLeft" data-wow-duration="1s" data-wow-delay=".5s" data-tab="vacancy" id="something"><span>Вакансии</span></div>
-                <div class="tab wow  slideInLeft" data-wow-duration="1s" data-wow-delay=".8s" data-tab="contacts"><span>Контакты</span></div>
+                <div class="tab tab--pad active  wow  slideInLeft" data-wow-duration="1s" data-wow-delay=".2s" data-tab="about-us">
+                    <div class="d-flex align-items-center">
+                        <span class="tab__circle"><i class="fa fa-info" aria-hidden="true"></i></span>
+                        <span>О нас</span>
+                    </div>
+                 </div>
+
+                <div class="tab tab--pad wow  slideInLeft" data-wow-duration="1s" data-wow-delay=".8s" data-tab="contacts">
+
+                    <div class="d-flex align-items-center">
+                        <span class="tab__circle"><i class="fa fa-phone" aria-hidden="true"></i></span>
+                        <span>Контакты</span>
+                    </div>
+
+                    </div>
+                <div class="tab tab--pad wow  slideInLeft" data-wow-duration="1s" data-wow-delay=".5s" data-tab="vacancy" id="something">
+
+                    <div class="d-flex align-items-center">
+                        <span class="tab__circle"><i class="fa fa-users" aria-hidden="true"></i></span>
+                        <span>Вакансии</span>
+                    </div>
+                </div>
             </div>
             <div class="col-md-6 ml-md-auto">
 
@@ -441,10 +460,19 @@
         <div class="row" id="wr-tab-3">
             <div class="col">
                 <div class="tab tab--pad-2 active wow  slideInDown" data-tab="advantages">
-                    <span>преимущества для вендоров</span>
+                     <div class="d-flex align-items-center">
+                          <span class="tab__circle"><i class="fa fa-line-chart" aria-hidden="true"></i></span>
+                        <span>преимущества для вендоров</span>
+                    </div>
+
                 </div>
                 <div class="tab tab--pad-2 wow  slideInUp" data-tab="presentation">
-                    <span>презентация для вендоров</span>
+                    <div class="d-flex align-items-center">
+                        <span class="tab__circle"><i class="fa fa-book" aria-hidden="true"></i></span>
+                        <span>презентация для вендоров</span>
+                    </div>
+
+
                 </div>
 
             </div>
@@ -565,7 +593,21 @@
     <div class="popUp__bg"></div>
     <div class="vendors__presentation animated ">
         <button class="popUp__close"><i class="fa fa-times" aria-hidden="true"></i></button>
-        <iframe src="img/pdf.pdf" frameborder="0"></iframe>
+
+        <div class="brandBook owl-carousel">
+
+            <?php
+                $i = 1;
+                while ($i<11){
+                    $i++;
+               echo   '<div class="brandBook__item">
+                        <img src="img/book/pdf-'.$i.'.jpg" alt="pdf">
+                    </div>';
+
+          }?>
+
+        </div>
+
     </div>
 
 
@@ -580,7 +622,7 @@
             <div class="col-12">
                 <div class="news" >
                     <h1 class="news__title">Новости</h1>
-                    <p class="news__subTitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                   <!-- <p class="news__subTitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>-->
 
                     <div id="wr-tab-4">
 
@@ -598,7 +640,7 @@
                         <div class="row">
                             <div class="content-tab" id="tab-company-news">
                                 <div class="row">
-                                    <div class="col-md-6">
+                                    <div class="col-md-7">
 
                                         <div class="news__wrapper scroll">
                                             <a href="#" class="news__item">
@@ -636,7 +678,7 @@
                                         </div>
 
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-md-5">
                                         <div class="fullStory scroll">
                                             <h1 class="fullStory__title">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do</h1>
                                             <img src="img/full-img.jpg" alt="full" class="fullStory__img">
@@ -651,11 +693,54 @@
                             </div>
 
                             <div class="content-tab" id="tab-vendor-news">
-                                <div class="news__wrapper">
-                                    <a href="#" class="news__item">
-                                        <div class="news__text">23123</div>
-                                        <div class="news__date">22.08.2017</div>
-                                    </a>
+                                <div class="row">
+                                    <div class="col-md-7">
+
+                                        <div class="news__wrapper scroll">
+                                            <a href="#" class="news__item">
+                                                <div class="news__text">Lorem ipsum dolor sit amet</div>
+                                                <div class="news__date">22.08.2017</div>
+                                            </a>
+                                            <a href="#" class="news__item">
+                                                <div class="news__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci consequatur delectus </div>
+                                                <div class="news__date">22.08.2017</div>
+                                            </a>
+                                            <a href="#" class="news__item">
+                                                <div class="news__text">eos expedita facere fugiat illum ipsum minus necessitatibus perferendis, perspiciatis porro praesentium quasi quo ratione sequi tenetur voluptas!</div>
+                                                <div class="news__date">22.08.2017</div>
+                                            </a>
+                                            <a href="#" class="news__item">
+                                                <div class="news__text">Lorem ipsum dolor sit ametorem ipsum dolor sit ametorem ipsum dolor sit amet</div>
+                                                <div class="news__date">22.08.2017</div>
+                                            </a>
+                                            <a href="#" class="news__item">
+                                                <div class="news__text">Lorem ipsum dolor sit amet</div>
+                                                <div class="news__date">22.08.2017</div>
+                                            </a>
+                                            <a href="#" class="news__item">
+                                                <div class="news__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci consequatur delectus </div>
+                                                <div class="news__date">22.08.2017</div>
+                                            </a>
+                                            <a href="#" class="news__item">
+                                                <div class="news__text">eos expedita facere fugiat illum ipsum minus necessitatibus perferendis, perspiciatis porro praesentium quasi quo ratione sequi tenetur voluptas!</div>
+                                                <div class="news__date">22.08.2017</div>
+                                            </a>
+                                            <a href="#" class="news__item">
+                                                <div class="news__text">Lorem ipsum dolor sit ametorem ipsum dolor sit ametorem ipsum dolor sit amet</div>
+                                                <div class="news__date">22.08.2017</div>
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-5">
+                                        <div class="fullStory scroll">
+                                            <h1 class="fullStory__title">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do</h1>
+                                            <img src="img/full-img.jpg" alt="full" class="fullStory__img">
+                                            <p class="fullStory__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                                                <br><br>
+                                                aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo<br><br> inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam<br><br> est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
