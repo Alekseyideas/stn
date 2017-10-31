@@ -4,8 +4,8 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-height : 830px)
-  .m-top-100
-    margin-top: 50px
+  //.m-top-100
+    //margin-top: 50px
   //.height-block
     //padding-top: 100px
   .sliderContent
@@ -25,10 +25,10 @@
   #tabs_news_wrapper
     margin: 0
   .news__wrapper
-    max-height: 300px
+    max-height: 450px
 
   .fullStory
-    max-height: 300px
+    max-height: 450px
     margin-top: 20px
     &__title
       margin: 0 0 20px
@@ -103,9 +103,27 @@
     display: none
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
+  body
+    overflow-y: auto
+  #block-3
+    padding-bottom: 30px
+    .row
+      &>.scroll
+        max-height: 200px
+        overflow: scroll
+        margin-bottom: 30px
+  .port__link
+    display: block
+    max-width: 150px
+    width: 30%
+    margin: 0 5px 10px
+    img
+      width: 100%
   .news__wrapper
     max-height: inherit
 
+  //#block-1
+   //background: #27201f url("../img/first-slide-m.jpg") no-repeat center / contain
   .fullStory
     max-height: inherit
   .bottom-vendors
@@ -168,10 +186,18 @@
     display: none
   .m-lang
     display: none
+  #wr-tab-1,#wr-tab-2,#wr-tab-3
+    padding-top: 120px
 @media only screen and (min-width : 1200px)
+  .news__title
+    margin-top: 100px
   .content-tab-title
     margin-top: -70px
-
+  #tabs_news_wrapper
+    margin-bottom: 0
+  #tab-company-news
+    .tab
+      margin-bottom: -20px
 @media only screen and (min-width : 1366px)
 	/**/
 
@@ -198,3 +224,8 @@
 
   .enter
     margin: 140px auto 0
+
+@media only screen and (min-height : 500px) and (max-height: 650px) and (min-width: 1200px)
+  #tab-company-news
+    .scroll
+      max-height: 350px !important

@@ -1,6 +1,10 @@
 'use strict';
 
 console.log('Ready !');
+$(window).on('load', function () {
+    $('.container-preloader').fadeOut(1000);
+    //$('#main-logo').addClass('zoomIn');
+});
 
 function HeightBlock() {
     var block = document.getElementById('block-1');
@@ -15,36 +19,66 @@ function HeightBlock() {
     var logoImageWidth = logoImage.width();
 
     var mLeft = (firstLink.offset().left - logoImageWidth - logoImage.offset().left) / 2;
-    console.log(phone.width());
     phone.css({
         left: logoImageWidth + mLeft + logoImage.offset().left - phone.width() / 2 + 'px'
     });
 
     var presetation = document.getElementsByClassName('vendors__presentation')[0];
-    var logo = document.getElementById('main-logo');
-    var logo_height = logo.height;
+    //const logo = document.getElementById('main-logo');
+    //const logo_height = logo.height;
 
-    logo.style.marginTop = '-' + logo_height / 2 + 'px';
+    //logo.style.marginTop = `-${logo_height/2}px`;
 
     var text_block = document.getElementsByClassName('scroll');
     var m_top = document.getElementsByClassName('m-top-100');
 
+    var block1 = document.getElementById('wr-tab-1');
+
     if (win_width > 1000) {
         for (var i = 0; i < text_block.length; i++) {
-            text_block[i].style.height = win_height < 800 ? win_height / 2 - 70 + 'px' : win_height / 2 - 50 + 'px';
+            text_block[i].style.height = win_height < 800 ? win_height / 1.3 + 'px' : win_height / 1.3 - 50 + 'px';
         }
     }
 
     presetation.style.marginLeft = '-' + presetation.offsetWidth / 2 + 'px';
-    for (var _i = 0; _i < m_top.length; _i++) {
-        m_top[_i].style.marginTop = win_height < 800 ? '10px' : '70px';
-    }if (win_width > 1000) {
+    //for (let i = 0; i<m_top.length; i++) m_top[i].style.marginTop = win_height < 800 ? '10px' : '70px';
+
+
+    if (win_width > 1000) {
         $('.scroll').mCustomScrollbar({
             theme: "rounded"
         });
         $('.vendors').mCustomScrollbar({
             axis: "x"
         });
+    }
+
+    var sections = document.getElementsByClassName('height-block');
+
+    var _iteratorNormalCompletion = true;
+    var _didIteratorError = false;
+    var _iteratorError = undefined;
+
+    try {
+        for (var _iterator = sections[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+            var section = _step.value;
+
+
+            section.style.minHeight = window.innerHeight + 'px';
+        }
+    } catch (err) {
+        _didIteratorError = true;
+        _iteratorError = err;
+    } finally {
+        try {
+            if (!_iteratorNormalCompletion && _iterator.return) {
+                _iterator.return();
+            }
+        } finally {
+            if (_didIteratorError) {
+                throw _iteratorError;
+            }
+        }
     }
 }
 
@@ -53,6 +87,16 @@ HeightBlock();
 window.addEventListener('resize', function () {
     HeightBlock();
 });
+
+var headerFunc = function headerFunc() {
+
+    window.onscroll = function () {
+        var section = document.getElementById('block-2');
+        var header = document.getElementsByTagName('header')[0];
+        header.style.position = window.pageYOffset >= section.offsetTop ? 'fixed' : 'absolute';
+    };
+};
+headerFunc();
 
 (function () {
     var menu = document.querySelectorAll('nav ul li');
@@ -82,6 +126,7 @@ scroll(partner, '#block-4');
 scroll(vendor, '#block-5');
 scroll(press, '#block-6');
 scroll(enter, '#block-7');
+scroll($('.to-next-slide'), '#block-2');
 
 (function () {
     var link = document.querySelectorAll('a');
@@ -109,12 +154,12 @@ function tabs(x) {
         // click event tab
         tab[i].addEventListener('click', function () {
 
-            for (var _i2 = 0; _i2 < tab.length; _i2++) {
-                tab[_i2].classList.remove('active');
+            for (var _i = 0; _i < tab.length; _i++) {
+                tab[_i].classList.remove('active');
             }this.classList.add('active');
 
-            for (var _i3 = 0; _i3 < content.length; _i3++) {
-                content[_i3].style.display = 'none';
+            for (var _i2 = 0; _i2 < content.length; _i2++) {
+                content[_i2].style.display = 'none';
             }content_tab.style.display = 'block';
         });
 
@@ -185,17 +230,44 @@ $('.slider').owlCarousel({
         }
     }
 });
+
+$('.slider2').owlCarousel({
+    loop: true,
+    margin: 10,
+    autoplay: true,
+    responsiveClass: true,
+    navText: ['<i class="fa fa-chevron-left" aria-hidden="true"></i>', '<i class="fa fa-chevron-right" aria-hidden="true"></i>'],
+    responsive: {
+        0: {
+            items: 1,
+            nav: false,
+            dots: true
+
+        },
+        600: {
+            items: 2,
+            nav: false
+        },
+        1000: {
+            items: 4,
+            nav: true
+        }
+    }
+});
+
 $(document).ready(function () {
 
-    if (window.innerWidth > 1000) {
-        $('#fullpage').fullpage({
-            anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage', '5thPage', '6thPage', 'lastPage'],
-            menu: '#menu',
-            scrollingSpeed: 1000,
-            scrollBar: true
-        });
-        scroll('.to-next-slide', '#block-2');
-    }
+    /*
+        if(window.innerWidth > 1000){
+            $('#fullpage').fullpage({
+                anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage', '5thPage','6thPage','lastPage'],
+                menu: '#menu',
+                scrollingSpeed: 1000,
+                scrollBar:true
+            });
+            scroll('.to-next-slide','#block-2');
+        }
+    */
 
     $('#btn__show-presentation').click(function () {
         $('.vendors__presentation').removeClass('fadeOutLeft').addClass('fadeInLeft').css('left', '50%');
@@ -218,5 +290,10 @@ $(document).ready(function () {
     });
     $('#menu li').click(function () {
         $('.m-close-menu').click();
+    });
+
+    $('.port__link').click(function () {
+        $('.inter-text ').hide();
+        $('.port__content ').show();
     });
 });

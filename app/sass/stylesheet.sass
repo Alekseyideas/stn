@@ -5,6 +5,8 @@ body
   padding: 0
   margin: 0
   font-family: "Open Sans", sans-serif
+  overflow-y: hidden
+  //overflow-x: hidden
 
 
 a,button,input
@@ -18,11 +20,14 @@ a,button,input
 
 
 #block-1
-  background: url("../img/block-1.jpg") no-repeat center / cover
+  background: #27201f url("../img/first-slide.jpg") no-repeat center / cover
 #block-2
   background: url("../img/block-2.jpg") no-repeat center / cover
 #block-3
   background: url("../img/block-3.jpg") no-repeat center / cover
+  padding-top: 100px
+  padding-bottom: 0
+  box-sizing: content-box
 #block-4
   background: url("../img/block-4.jpg") no-repeat center / cover
 #block-5
@@ -31,20 +36,40 @@ a,button,input
   background: url("../img/block-6.jpg") no-repeat center / cover
 #block-7
   background: url("../img/block-7.jpg") no-repeat center / cover
+  padding-top: 170px
+#block-8
+  background: url("../img/block-8.jpg") no-repeat center / cover
 .height-block
   position: relative
   //padding-top: 121px
-
+.port__content
+  margin-top: 20px
+.port__link
+  display: block
+  max-width: 150px
+  width: 46%
+  margin: 0 5px 10px
+  img
+    width: 100%
+.port__content
+  img
+    max-width: 200px
+  p
+    margin: 10px 0
+    color: white
+  a
+    color: $orange
+    text-decoration: underline
 #block-1
   padding: 0
 
 #main-logo
   width: 50%
   height: auto
-  position: absolute
-  left: 50%
-  margin-left: -25%
-  top: 50%
+  //position: absolute
+  //left: 50%
+  //margin-left: -25%
+  //top: 50%
 
 .to-next-slide
   position: absolute
@@ -65,11 +90,14 @@ a,button,input
     border: 1px solid $orange
     color: $orange
 header
-  position: fixed
+  position: absolute
   z-index: 10
   width: 100%
   padding: 20px 0
   background: rgba(black,.4)
+  top: 0
+  left: 0
+  width: 100%
   .active
     a
       color: $orange
@@ -78,7 +106,7 @@ header
   img
     display: block
     margin: auto
-    width: 80%
+    width: 52%
     height: auto
     cursor: pointer
     max-height: 100px
@@ -152,8 +180,8 @@ nav
       color: white
       &.active
         color: $orange
-.m-top-100
-  margin-top: 100px
+//.m-top-100
+  //margin-top: 100px
 .tab
   width: 100%
   max-width: 300px
@@ -424,12 +452,16 @@ nav
   &__text
     color: white
     line-height: 25px
+.section
+  box-sizing: border-box
+  max-width: 100%
 .section__title
   color: white
   text-align: center
   text-transform: uppercase
   font-size: 50px
-.slider
+.slider,
+.slider2
   margin-top: 40px
   .owl-prev,
   .owl-next
@@ -623,4 +655,111 @@ nav
   top: 10px
   font-size: 25px
   z-index: 10
+
+
+.container-preloader
+  background: black
+  position: fixed
+  width: 100%
+  height: 100%
+  z-index: 99
+  top: 0
+  left: 0
+
+.preloader
+  position: absolute
+  margin: -48px 0 0 -48px
+  display: block
+  position: relative
+  width: 90px
+  height: 90px
+  border: 3px solid #eb1777
+  border-radius: 50%
+  top: 50%
+  left: 50%
+  animation-delay: 0.2s
+
+
+.preloader:before
+  content: ""
+  display: block
+  position: absolute
+  width: 58px
+  height: 58px
+  border: 3px solid #3bb4e5
+  top: 50%
+  left: 50%
+  margin: -32px 0 0 -32px
+  border-radius: 50%
+  animation-delay: 0.4s
+
+.preloader:after
+  content: ""
+  display: block
+  position: absolute
+  border: 3px solid #ccdc25
+  width: 26px
+  height: 26px
+  top: 50%
+  left: 50%
+  margin: -16px 0 0 -16px
+  border-radius: 50%
+  animation-delay: 0.6s
+
+
+.preloader,
+.preloader:before,
+.preloader:after
+  animation-name: Scale
+  animation-duration: 3s
+  animation-iteration-count: infinite
+  animation-timing-function: ease-in-out
+  animation-direction: alternate
+  -webkit-animation-name: Scale
+  -webkit-animation-duration: 3s
+  -webkit-animation-iteration-count: infinite
+  -webkit-animation-timing-function: ease-in-out
+  -webkit-animation-direction: alternate
+
+@keyframes Scale
+  25%
+    transform: scale(-1.2, 1.2)
+
+  50%
+    transform: scale(-1, -1)
+
+  75%
+    transform: scale(1.2, -1.2)
+
+  100%
+    transform: scale(1, 1)
+
+@-webkit-keyframes Scale
+  25%
+    -webkit-transform: scale(-1.2, 1.2)
+
+  50%
+    -webkit-transform: scale(-1, -1)
+
+  75%
+    -webkit-transform: scale(1.2, -1.2)
+#block-8
+  .sliderContent__img
+    height: 120px
+
+  .sliderContent
+    width: 226px
+    height: 131px
+.port__content
+  display: none
+.port__link
+  &:hover
+    opacity: .7
+.inter-text
+  h5
+    font-size: 25px
+    line-height: 35px
+    text-shadow: 0 0 2px black
+    color: white
+    font-weight: bold
 @import "media"

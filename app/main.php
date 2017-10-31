@@ -1,8 +1,7 @@
 <?php include (dirname(__FILE__).'/parts/header.php'); ?>
 
-<section class="section height-block" id="block-1">
-
-    <img src="img/logo.svg" alt="logo" id="main-logo" class="animated zoomIn">
+<section class="section height-block d-flex justify-content-center align-items-center" id="block-1">
+    <img src="img/cloud_logo.png" alt="logo" id="main-logo" class="animated ">
 
 
     <div class="to-next-slide animated pulse infinite ">
@@ -11,6 +10,74 @@
 
 </section>
 <section class="section height-block" id="block-2">
+    <header>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+
+                    <div class="logo-tel">
+                        <div class="d-flex align-items-end">
+                            <div class="menu-logo">
+                                <img src="img/logo.svg" alt="logo">
+                            </div>
+                            <a href="tel:+77273330999" class="headerPhone">+7  (727)  333  0  999</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="main-menu">
+                    <div class="m-close-menu"><i class="fa fa-times" aria-hidden="true"></i></div>
+                    <nav>
+                        <ul class="list-unstyled d-flex align-items-end justify-content-center" id="menu">
+                            <li data-menuanchor="firstPage"><a href="#"></a></li>
+                            <li data-menuanchor="secondPage">
+                                <a href="#" class="menu_link main_link">О КОМПАНИИ</a>
+                            </li>
+                            <li  data-menuanchor="3rdPage">
+                                <a href="#" class="menu_link main_link">Портфолио</a>
+
+                            </li>
+                            <li data-menuanchor="4thPage">
+                                <a href="#" class="main_link">Партнерам</a>
+                            </li>
+                            <li  data-menuanchor="5thPage">
+                                <a href="#" class="main_link">ВендОрам</a>
+
+                            </li>
+                            <li data-menuanchor="6thPage">
+                                <a href="#" class="menu_link main_link" >ПРЕСС-ЦЕНТР</a>
+                            </li>
+                            <li>
+                                <a href="#" class="menu_link" target="_blank">Каталог</a>
+                            </li>
+                            <li data-menuanchor="lastPage">
+                                <a href="#" class="menu_link main_link" >ВХОД НА ПОРТАЛ</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="m-lang">
+
+                        <ul class="d-flex justify-content-between list-unstyled">
+                            <li><a href="#">eng</a></li>
+                            <li><a href="#">kz</a></li>
+                            <li><a href="#" class="active">руc</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col" id="lang">
+                    <ul class="d-flex justify-content-end list-unstyled">
+                        <li><a href="#">eng</a></li>
+                        <li><a href="#">kz</a></li>
+                        <li><a href="#" class="active">руc</a></li>
+                    </ul>
+                </div>
+                <div class="col" id="mobile-menu">
+                    <button id="btn_menu"><i class="fa fa-bars" aria-hidden="true"></i></button>
+                </div>
+
+            </div>
+
+        </div>
+    </header>
     <input type="hidden" name="id" value="1" />
     <div class="container m-top-100">
         <div class="row" id="wr-tab-1">
@@ -38,11 +105,11 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 ml-md-auto">
+            <div class="col-md-8 ml-md-auto">
 
                 <div class="content-tab  wow  slideInRight" data-wow-duration="1s" data-wow-delay=".2s" id="tab-about-us">
 
-                    <h3 class="content-tab-title wow  slideInDown" data-wow-duration="1s" data-wow-delay=".2s">О нас</h3>
+                    <!--<h3 class="content-tab-title wow  slideInDown" data-wow-duration="1s" data-wow-delay=".2s">О нас</h3>-->
                     <div class="scroll">
                     <p class="content-tab-text">
                         Мы занимаемся дистрибуцией. Мы понимаем свое назначение, любим и умеем делать нашу работу. За многие годы присутствия на рынке телекоммуникационного и ИТ-оборудования был накоплен опыт и знания, которые позволяют понимать и удовлетворять потребности наших партнеров. Наш главный капитал – это честное имя и репутация надежного партнера.
@@ -141,13 +208,13 @@
 
 
 
-                    
+
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="bottom-vendors">
+   <!-- <div class="bottom-vendors">
         <div class="container">
             <div class="vendors">
                 <ul class="d-flex align-items-center justify-content-between  list-unstyled">
@@ -205,14 +272,52 @@
             </div>
 
         </div>
-    </div>
+    </div>-->
 
 </section>
 <section class="section height-block" id="block-3">
         <div class="container">
             <div class="row">
-                <div class="col">
-                    <!--<h1 class="section__title">Портфолио</h1>-->
+
+                <div class="col scroll">
+                    <div class="d-flex flex-wrap">
+
+                        <?php
+                        $i=0;
+                        while($i<20){
+                            echo '
+                                <a href="#" class="port__link">
+                            <img src="img/slider2.jpg" alt="slider2">
+                        </a>
+                            ';
+                            $i++;
+                        }
+                        ?>
+
+                    </div>
+                </div>
+                <div class="col-md-6">
+
+                    <div class="inter-text">
+                        <h5>
+                            Наш портфель представлен всемирноизвестными брендами, для ознакомления кликните на интересующий
+                        </h5>
+                    </div>
+
+                    <div class="scroll port__content">
+                        <img src="img/slider2.jpg" alt="slider2">
+                        <br><br>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquam assumenda culpa delectus, dolorem doloremque doloribus dolorum
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        </p>
+                        <a href="#">Переход в каталог</a>
+                    </div>
+                </div>
+
+             <!--   <div class="col">
                     <div class="slider owl-carousel">
                         <div class="slider__item">
                             <div class="sliderContent wow  flipInY" data-wow-duration=".5s" data-wow-delay=".1s">
@@ -316,7 +421,7 @@
                         </div>
 
                     </div>
-                </div>
+                </div>-->
             </div>
         </div>
 </section>
@@ -343,7 +448,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 ml-md-auto wow slideInRight">
+            <div class="col-md-8 ml-md-auto wow slideInRight">
                 <div class="content-tab scroll " id="tab-become_partner">
                     <h3 class="partner__title "> Преимущества работы с нами </h3>
                     <div class="partner">
@@ -476,7 +581,7 @@
                 </div>
 
             </div>
-            <div class="col-md-6 ml-md-auto">
+            <div class="col-md-8 ml-md-auto">
                 <div class="content-tab scroll" id="tab-advantages">
                     <h3 class="partner__title"> Преимущества работы с нами </h3>
                     <div class="partner">
@@ -530,7 +635,7 @@
             </div>
         </div>
     </div>
-    <div class="bottom-vendors">
+    <!--<div class="bottom-vendors">
         <div class="container">
             <div class="vendors">
                 <ul class="d-flex align-items-center justify-content-between  list-unstyled">
@@ -588,7 +693,7 @@
             </div>
 
         </div>
-    </div>
+    </div>-->
 
     <div class="popUp__bg"></div>
     <div class="vendors__presentation animated ">
@@ -805,5 +910,120 @@
  </div>
 
 </section>
+<!--<section class="section height-block" id="block-8">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="slider2 owl-carousel">
+                    <div class="slider__item">
+                        <div class="sliderContent wow  flipInY" data-wow-duration=".5s" data-wow-delay=".1s">
+                            <div class="sliderContent__img">
+                                <img src="img/slider2.jpg" alt="slider">
+                            </div>
 
+                        </div>
+
+                        <div class="sliderContent wow  flipInY" data-wow-duration=".5s" data-wow-delay=".3s">
+                            <div class="sliderContent__img">
+                                <img src="img/slider2.jpg" alt="slider">
+                            </div>
+
+                        </div>
+                        <div class="sliderContent wow  flipInY" data-wow-duration=".5s" data-wow-delay=".3s">
+                            <div class="sliderContent__img">
+                                <img src="img/slider2.jpg" alt="slider">
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="slider__item">
+                        <div class="sliderContent wow  flipInY" data-wow-duration=".5s" data-wow-delay=".5s">
+                            <div class="sliderContent__img">
+                                <img src="img/slider2.jpg" alt="slider">
+                            </div>
+                        </div>
+
+                        <div class="sliderContent wow  flipInY" data-wow-duration=".5s" data-wow-delay=".7s">
+                            <div class="sliderContent__img">
+                                <img src="img/slider2.jpg" alt="slider">
+                            </div>
+
+                        </div>
+                        <div class="sliderContent wow  flipInY" data-wow-duration=".5s" data-wow-delay=".3s">
+                            <div class="sliderContent__img">
+                                <img src="img/slider2.jpg" alt="slider">
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="slider__item">
+                        <div class="sliderContent wow  flipInY" data-wow-duration=".5s" data-wow-delay=".9s">
+                            <div class="sliderContent__img">
+                                <img src="img/slider2.jpg" alt="slider">
+                            </div>
+
+                        </div>
+
+                        <div class="sliderContent wow  flipInY" data-wow-duration=".5s" data-wow-delay="1.1s">
+                            <div class="sliderContent__img">
+                                <img src="img/slider2.jpg" alt="slider">
+                            </div>
+
+                        </div>
+                        <div class="sliderContent wow  flipInY" data-wow-duration=".5s" data-wow-delay=".3s">
+                            <div class="sliderContent__img">
+                                <img src="img/slider2.jpg" alt="slider">
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="slider__item">
+                        <div class="sliderContent wow  flipInY" data-wow-duration=".5s" data-wow-delay="1.3s">
+                            <div class="sliderContent__img">
+                                <img src="img/slider2.jpg" alt="slider">
+                            </div>
+
+                        </div>
+
+                        <div class="sliderContent wow  flipInY" data-wow-duration=".5s" data-wow-delay="1.5s">
+                            <div class="sliderContent__img">
+                                <img src="img/slider2.jpg" alt="slider">
+                            </div>
+
+                        </div>
+                        <div class="sliderContent wow  flipInY" data-wow-duration=".5s" data-wow-delay=".3s">
+                            <div class="sliderContent__img">
+                                <img src="img/slider2.jpg" alt="slider">
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="slider__item">
+                        <div class="sliderContent wow  flipInY" data-wow-duration=".5s" data-wow-delay="1.7s">
+                            <div class="sliderContent__img">
+                                <img src="img/slider2.jpg" alt="slider">
+                            </div>
+
+                        </div>
+
+                        <div class="sliderContent wow  flipInY" data-wow-duration=".5s" data-wow-delay="1.9s">
+                            <div class="sliderContent__img">
+                                <img src="img/slider2.jpg" alt="slider">
+                            </div>
+
+                        </div>
+                        <div class="sliderContent wow  flipInY" data-wow-duration=".5s" data-wow-delay=".3s">
+                            <div class="sliderContent__img">
+                                <img src="img/slider2.jpg" alt="slider">
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>-->
 <?php include (dirname(__FILE__).'/parts/footer.php'); ?>

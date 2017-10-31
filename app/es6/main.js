@@ -1,4 +1,8 @@
 console.log('Ready !');
+$(window).on('load', function(){
+    $('.container-preloader').fadeOut(1000);
+    //$('#main-logo').addClass('zoomIn');
+});
 
 
 function HeightBlock() {
@@ -15,28 +19,29 @@ function HeightBlock() {
     let logoImageWidth = logoImage.width();
 
     let mLeft = (firstLink.offset().left - logoImageWidth - logoImage.offset().left) / 2 ;
-    console.log(phone.width() );
     phone.css({
         left: (logoImageWidth +  mLeft + logoImage.offset().left) - phone.width()/2  + 'px'
     });
 
 
     const presetation = document.getElementsByClassName('vendors__presentation')[0];
-    const logo = document.getElementById('main-logo');
-    const logo_height = logo.height;
+    //const logo = document.getElementById('main-logo');
+    //const logo_height = logo.height;
 
-    logo.style.marginTop = `-${logo_height/2}px`;
+    //logo.style.marginTop = `-${logo_height/2}px`;
 
     const text_block = document.getElementsByClassName('scroll');
     const m_top = document.getElementsByClassName('m-top-100');
 
+    const block1 = document.getElementById('wr-tab-1');
+
     if(win_width > 1000){
-        for (let i = 0; i<text_block.length; i++) text_block[i].style.height =  win_height < 800 ? `${win_height/2 - 70}px` : `${win_height/2 - 50}px`;
+        for (let i = 0; i<text_block.length; i++) text_block[i].style.height =  win_height < 800 ? `${win_height/1.3}px` : `${win_height/1.3 - 50}px`;
 
     }
 
     presetation.style.marginLeft = '-' + presetation.offsetWidth/2 + 'px'
-    for (let i = 0; i<m_top.length; i++) m_top[i].style.marginTop = win_height < 800 ? '10px' : '70px';
+    //for (let i = 0; i<m_top.length; i++) m_top[i].style.marginTop = win_height < 800 ? '10px' : '70px';
 
 
 
@@ -51,6 +56,17 @@ function HeightBlock() {
         });
     }
 
+
+
+    const sections = document.getElementsByClassName('height-block');
+
+    for( let section of sections){
+
+        section.style.minHeight = window.innerHeight + 'px'
+    }
+
+
+
 }
 
 HeightBlock();
@@ -58,6 +74,21 @@ HeightBlock();
 window.addEventListener('resize', function () {
     HeightBlock();
 });
+
+
+
+let headerFunc = ()=>{
+
+    window.onscroll = ()=>{
+        let section = document.getElementById('block-2');
+        let header = document.getElementsByTagName('header')[0];
+        header.style.position = window.pageYOffset >= section.offsetTop ? 'fixed' : 'absolute';
+
+
+    }
+
+};
+headerFunc();
 
 
 
@@ -92,6 +123,7 @@ scroll(partner,'#block-4');
 scroll(vendor,'#block-5');
 scroll(press,'#block-6');
 scroll(enter,'#block-7');
+scroll($('.to-next-slide'),'#block-2');
 
 
 
@@ -210,11 +242,37 @@ $('.slider').owlCarousel({
         }
     }
 });
+
+$('.slider2').owlCarousel({
+    loop:true,
+    margin:10,
+    autoplay:true,
+    responsiveClass:true,
+    navText:['<i class="fa fa-chevron-left" aria-hidden="true"></i>','<i class="fa fa-chevron-right" aria-hidden="true"></i>'],
+    responsive:{
+        0:{
+            items:1,
+            nav: false,
+            dots: true
+
+        },
+        600:{
+            items:2,
+            nav:false
+        },
+        1000:{
+            items:4,
+            nav:true
+        }
+    }
+});
+
 $(document).ready(function() {
 
 
 
 
+/*
     if(window.innerWidth > 1000){
         $('#fullpage').fullpage({
             anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage', '5thPage','6thPage','lastPage'],
@@ -224,6 +282,7 @@ $(document).ready(function() {
         });
         scroll('.to-next-slide','#block-2');
     }
+*/
 
     $('#btn__show-presentation').click(function () {
        $('.vendors__presentation').removeClass('fadeOutLeft').addClass('fadeInLeft').css('left','50%');
@@ -251,8 +310,11 @@ $(document).ready(function() {
 
 
 
+$('.port__link').click(function () {
+    $('.inter-text ').hide();
+    $('.port__content ').show();
 
-
+});
 
 });
 

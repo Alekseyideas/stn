@@ -28,75 +28,10 @@
 
 </head>
 <body>
+<div class='container-preloader'>
+    <i class='preloader'></i>
+</div>
 
-<header>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col">
-                
-                <div class="logo-tel">
-                    <div class="d-flex align-items-end">
-                        <div class="menu-logo">
-                            <img src="img/logo.svg" alt="logo">
-                        </div>
-                        <a href="tel:+77273330999" class="headerPhone">+7  (727)  333  0  999</a>
-                    </div>
-                </div>
-            </div>
-            <div id="main-menu">
-                <div class="m-close-menu"><i class="fa fa-times" aria-hidden="true"></i></div>
-               <nav>
-                   <ul class="list-unstyled d-flex align-items-end justify-content-center" id="menu">
-                        <li data-menuanchor="firstPage"><a href="#firstPage"></a></li>
-                       <li data-menuanchor="secondPage">
-                           <a href="#secondPage" class="menu_link main_link">О КОМПАНИИ</a>
-                       </li>
-                       <li  data-menuanchor="3rdPage">
-                           <a href="#3rdPage" class="menu_link main_link">Портфолио</a>
-
-                       </li>
-                       <li data-menuanchor="4thPage">
-                           <a href="#4thPage" class="main_link">Партнерам</a>
-                       </li>
-                       <li  data-menuanchor="5thPage">
-                           <a href="#5thPage" class="main_link">ВендОрам</a>
-
-                       </li>
-                       <li data-menuanchor="6thPage">
-                           <a href="#6thPage" class="menu_link main_link" >ПРЕСС-ЦЕНТР</a>
-                       </li>
-                       <li>
-                           <a href="#" class="menu_link" target="_blank">Каталог</a>
-                       </li>
-                       <li data-menuanchor="lastPage">
-                           <a href="#lastPage" class="menu_link main_link" >ВХОД НА ПОРТАЛ</a>
-                       </li>
-                   </ul>
-               </nav>
-                <div class="m-lang">
-
-                    <ul class="d-flex justify-content-between list-unstyled">
-                        <li><a href="#">eng</a></li>
-                        <li><a href="#">kz</a></li>
-                        <li><a href="#" class="active">руc</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col" id="lang">
-                <ul class="d-flex justify-content-end list-unstyled">
-                    <li><a href="#">eng</a></li>
-                    <li><a href="#">kz</a></li>
-                    <li><a href="#" class="active">руc</a></li>
-                </ul>
-            </div>
-            <div class="col" id="mobile-menu">
-               <button id="btn_menu"><i class="fa fa-bars" aria-hidden="true"></i></button>
-            </div>
-
-        </div>
-
-    </div>
-</header>
 
 <main id="fullpage">
 
